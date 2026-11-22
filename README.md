@@ -116,3 +116,20 @@ Edit accounts in `accounts.json`. Each entry has `id`, `handle`, `name`, `catego
 - TikTok embed play counts are marked partial when fewer videos come back than the profile lists.
 - YouTube’s recent-video likes and comments are not lifetime totals and are not added to those columns.
 - The on-screen total never moves down. A higher snapshot eases in over about a second. A lower one is kept as the floor and the pace continues from there.
+
+## Automatic refresh (no paid keys)
+
+`.github/workflows/refresh.yml` runs every 30 minutes on GitHub Actions. It installs `yt-dlp`, runs `node collector/run.js`, and commits `data/snapshot.json` to `main`, which makes Vercel redeploy (about 48 deploys a day, under the Hobby limit of 100). Run it by hand from the repo's **Actions → Refresh numbers → Run workflow**.
+
+What is read without keys:
+
+| Platform | Source | Numbers |
+| --- | --- | --- |
+| TikTok | public profile + every public video via `yt-dlp` | followers, likes, comments, total plays |
+| YouTube | public channel page | lifetime channel views, subscribers |
+| Instagram | public profile preview | followers |
+| X | public profile via api.fxtwitter.com | followers |
+
+A failed read keeps the last good number and is never stored as zero. Optional repo secrets `YOUTUBE_API_KEY`, `X_BEARER_TOKEN`, `IG_BUSINESS_ACCOUNT_ID`, `IG_ACCESS_TOKEN` switch a platform to its official API.
+
+From any machine with push access, `./refresh.sh` collects and publishes in one command (`./refresh.sh --no-push` collects only).

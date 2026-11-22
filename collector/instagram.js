@@ -1,7 +1,12 @@
 import { num } from '../lib/num.js';
 import { fetchJson } from './http.js';
+import { collectInstagramPublic } from './public.js';
 
 export function instagramEnabled(env) {
+  return env.INSTAGRAM_PUBLIC !== '0' || instagramApiEnabled(env);
+}
+
+export function instagramApiEnabled(env) {
   return Boolean(env.IG_BUSINESS_ACCOUNT_ID && env.IG_ACCESS_TOKEN);
 }
 
@@ -15,6 +20,7 @@ export async function collectInstagram(account, env) {
   const handle = account.platforms?.instagram?.handle;
   if (!handle) return { ok: false, error: 'No Instagram handle configured' };
   const username = String(handle).replace(/^@/, '');
+  if (!instagramApiEnabled(env)) return collectInstagramPublic(username);
   let discovery = null;
   let lastError = 'Instagram Business Discovery failed';
   for (const fields of FIELD_SETS) {

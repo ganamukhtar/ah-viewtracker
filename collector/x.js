@@ -1,7 +1,12 @@
 import { num } from '../lib/num.js';
 import { fetchJson } from './http.js';
+import { collectXPublic } from './public.js';
 
 export function xEnabled(env) {
+  return env.X_PUBLIC !== '0' || xApiEnabled(env);
+}
+
+export function xApiEnabled(env) {
   return Boolean(env.X_BEARER_TOKEN);
 }
 
@@ -9,6 +14,7 @@ export async function collectX(account, env) {
   const handle = account.platforms?.x?.handle;
   if (!handle) return { ok: false, error: 'No X handle configured' };
   const username = String(handle).replace(/^@/, '');
+  if (!xApiEnabled(env)) return collectXPublic(username);
   const headers = { authorization: `Bearer ${env.X_BEARER_TOKEN}` };
   const userRes = await fetchJson(
     `https://api.x.com/2/users/by/username/${encodeURIComponent(username)}?user.fields=public_metrics`,

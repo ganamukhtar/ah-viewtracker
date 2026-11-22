@@ -1,6 +1,7 @@
 import { num } from '../lib/num.js';
 import { fetchText } from './http.js';
 import { collectTikTokApify, apifyEnabled } from './apify-tiktok.js';
+import { collectTikTokYtDlp, ytDlpBin } from './public.js';
 
 export function parseTikTokProfile(html) {
   const match = html.match(/<script id="__UNIVERSAL_DATA_FOR_REHYDRATION__" type="application\/json">([\s\S]*?)<\/script>/);
@@ -136,7 +137,7 @@ export function combineTikTok(profile, embed) {
 }
 
 export function tiktokPublicEnabled(env) {
-  return env.TIKTOK_PUBLIC === '1' || env.TIKTOK_PUBLIC === 'true';
+  return env.TIKTOK_PUBLIC !== '0' && env.TIKTOK_PUBLIC !== 'false';
 }
 
 export async function collectTikTokPublic(handle) {
@@ -239,6 +240,28 @@ export async function collectTikTok(account, env) {
   }
   if (tiktokPublicEnabled(env) || (apify && apify.ok === false)) {
     pub = await collectTikTokPublic(handle);
+    if (pub?.ok && ytDlpBin(env) && env.TIKTOK_YTDLP !== '0') {
+      pub = withFullVideoList(pub, await collectTikTokYtDlp(handle, env));
+    }
   }
   return mergeTikTokObservations(pub, apify);
+}
+
+/** Replace the short embed list with yt-dlp's full public video list when it read at least as many videos. */
+export function withFullVideoList(pub, full) {
+  if (!full?.ok || !full.counted) return pub;
+  if (typeof pub.viewsCounted === 'number' && full.counted < pub.viewsCounted) return pub;
+  const listed = typeof pub.viewsListed === 'number' ? pub.viewsListed : null;
+  return {
+    ...pub,
+    source: 'tiktok-public-profile+ytdlp',
+    views: full.plays,
+    comments: full.comments,
+    likes: typeof pub.likes === 'number' ? Math.max(pub.likes, full.videoLikes) : full.videoLikes,
+    viewsComplete: listed == null || full.counted >= Math.floor(listed * 0.98),
+    viewsCounted: full.counted,
+    viewsMethod: 'sum_of_all_public_videos',
+    viewsNote: `Sum of play counts on ${full.counted} public videos.`,
+    viewsPerSecond: velocityFromVideos(full.videos) ?? pub.viewsPerSecond ?? null,
+  };
 }

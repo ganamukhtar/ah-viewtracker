@@ -24,6 +24,7 @@ const state = {
 };
 let counter = createLiveCounter();
 let view = null;
+let totals = null;
 
 const q = (sel, root = document) => root.querySelector(sel);
 
@@ -55,7 +56,7 @@ function icon(platform) {
 }
 
 function fmt(value) {
-  return typeof value === 'number' ? value.toLocaleString('en-US') : 'Not connected';
+  return typeof value === 'number' ? value.toLocaleString('en-US') : '';
 }
 
 function checkedLine(iso) {
@@ -70,6 +71,12 @@ function currentFilter() {
   return { categories: state.categories, platforms: state.platforms, query: state.query };
 }
 
+/** Chip filters only. Typing in search narrows the list but never changes a total. */
+function totalsFilter() {
+  if (page === 'home') return DEFAULT_FILTER;
+  return { categories: state.categories, platforms: state.platforms, query: '' };
+}
+
 function paintStat(name, value) {
   const node = q(`[data-stat="${name}"]`);
   if (!node) return;
@@ -79,7 +86,7 @@ function paintStat(name, value) {
     return;
   }
   if (typeof value !== 'number') {
-    node.textContent = 'Not connected';
+    node.textContent = '';
     node.classList.add('is-missing');
     return;
   }
@@ -94,7 +101,7 @@ function paintFigure() {
   const value = counter.sample(Date.now());
   const whole = typeof value === 'number' ? Math.floor(value) : null;
   if (whole == null) {
-    valueNode.textContent = state.snapshot ? 'Not connected' : 'Checking…';
+    valueNode.textContent = state.snapshot ? '' : 'Checking…';
     valueNode.classList.add('is-text');
     if (rise) rise.hidden = true;
   } else {
@@ -102,9 +109,9 @@ function paintFigure() {
     valueNode.classList.remove('is-text');
     if (rise) rise.hidden = !(state.rate > 0);
   }
-  paintStat('followers', view?.followers);
-  paintStat('likes', view?.likes);
-  paintStat('comments', view?.comments);
+  paintStat('followers', totals?.followers);
+  paintStat('likes', totals?.likes);
+  paintStat('comments', totals?.comments);
   const confirmed = state.snapshot ? checkedLine(state.snapshot.checkedAt) : 'Checking the latest reports…';
   const line = q('[data-confirmed]');
   if (line.textContent !== confirmed) line.textContent = confirmed;
@@ -115,35 +122,30 @@ function paintFigure() {
 
 function retarget(reset) {
   view = state.snapshot ? aggregate(state.snapshot, currentFilter()) : null;
-  if (!view || typeof view.views !== 'number') {
+  totals = state.snapshot ? aggregate(state.snapshot, totalsFilter()) : null;
+  if (!totals || typeof totals.views !== 'number') {
     counter = createLiveCounter();
     state.rate = 0;
     paintFigure();
     return;
   }
-  const measured = measuredRate(state.snapshot.history, { accounts: state.snapshot.accounts }, currentFilter());
-  const choice = chooseRate(measured.perSecond, view.velocityPerSecond);
+  const measured = measuredRate(state.snapshot.history, { accounts: state.snapshot.accounts }, totalsFilter());
+  const choice = chooseRate(measured.perSecond, totals.velocityPerSecond);
   if (reset) counter = createLiveCounter();
   state.rate = choice.perSecond;
-  counter.push(view.views, choice.perSecond, Date.now());
+  counter.push(totals.views, choice.perSecond, Date.now());
   paintFigure();
 }
 
 function metricCell(value, partial) {
   const span = document.createElement('span');
   if (typeof value !== 'number') {
-    span.textContent = 'Not connected';
+    span.textContent = '';
     span.className = 'av-missing';
     return span;
   }
   span.textContent = value.toLocaleString('en-US');
   if (value === 0) span.title = 'Observed zero. This source is connected.';
-  if (partial) {
-    const mark = document.createElement('span');
-    mark.className = 'av-partial';
-    mark.textContent = ' partial';
-    span.append(mark);
-  }
   return span;
 }
 
@@ -164,26 +166,25 @@ function growthCell(growth) {
 
 function platformLine(platform) {
   const item = document.createElement('li');
-  if (platform.id !== 'x') item.append(icon(platform.id));
-  const link = document.createElement('a');
-  link.href = platform.url || '#';
-  link.target = '_blank';
-  link.rel = 'noopener noreferrer';
-  link.textContent = PLATFORM_LABELS[platform.id] || platform.id;
+  const link = document.createElement(platform.url ? 'a' : 'span');
+  if (platform.url) {
+    link.href = platform.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.title = platform.handle ? `@${platform.handle} on ${PLATFORM_LABELS[platform.id] || platform.id}` : '';
+  }
+  if (platform.id !== 'x') link.append(icon(platform.id));
+  link.append(PLATFORM_LABELS[platform.id] || platform.id);
   item.append(link);
   const detail = document.createElement('span');
   if (typeof platform.views === 'number') {
     detail.textContent = ` ${platform.views.toLocaleString('en-US')}`;
-    if (platform.viewsComplete === false) {
-      const mark = document.createElement('span');
-      mark.className = 'av-partial';
-      mark.textContent = ' partial';
-      detail.append(mark);
-    }
   } else {
     const missing = document.createElement('span');
     missing.className = 'av-missing';
-    missing.textContent = platform.status === 'unavailable' ? ' Not connected' : ' Views not recorded';
+    const parts = [];
+    if (typeof platform.followers === 'number') parts.push(`${platform.followers.toLocaleString('en-US')} followers`);
+    missing.textContent = parts.length ? ` ${parts.join(' · ')}` : '';
     detail.append(missing);
   }
   item.append(detail);
@@ -203,7 +204,8 @@ function detailCard(platform) {
     ['Followers', platform.followers, false],
   ]) {
     const line = document.createElement('p');
-    line.textContent = `${label} · ${typeof value === 'number' ? value.toLocaleString('en-US') : 'Not connected'}${partial && typeof value === 'number' ? ' partial' : ''}`;
+    if (typeof value !== 'number') continue;
+    line.textContent = `${label} · ${value.toLocaleString('en-US')}`;
     card.append(line);
   }
   if (platform.viewsNote) {
@@ -266,7 +268,7 @@ function accountIdentity(account, rank) {
   if (!account.rowPlatforms.length) {
     const empty = document.createElement('li');
     empty.className = 'av-missing';
-    empty.textContent = 'No platform handles configured';
+    empty.textContent = '';
     plats.append(empty);
   }
   const badge = document.createElement('span');
@@ -284,22 +286,24 @@ function renderBoard() {
   body.replaceChildren();
   cards.replaceChildren();
   const summary = q('[data-summary]');
-  const bits = [`${view.matched} account${view.matched === 1 ? '' : 's'}`];
-  bits.push(typeof view.views === 'number' ? `${fmt(view.views)} views` : 'views not connected');
-  if (typeof view.likes === 'number') bits.push(`${fmt(view.likes)} likes`);
-  if (typeof view.followers === 'number') bits.push(`${fmt(view.followers)} followers`);
+  const bits = [`${totals.matched} account${totals.matched === 1 ? '' : 's'}`];
+  if (typeof totals.views === 'number') bits.push(`${fmt(totals.views)} views`);
+  if (typeof totals.likes === 'number') bits.push(`${fmt(totals.likes)} likes`);
+  if (typeof totals.followers === 'number') bits.push(`${fmt(totals.followers)} followers`);
   summary.textContent = bits.join(' · ');
   const chips = q('[data-platform-totals]');
   chips.replaceChildren();
   for (const id of (state.platforms.includes('all') ? PLATFORM_ORDER : state.platforms)) {
-    const totals = view.platformTotals[id];
-    if (!totals) continue;
+    const platformTotal = totals.platformTotals[id];
+    if (!platformTotal) continue;
     const chip = document.createElement('div');
     chip.className = 'av-chip';
     const title = document.createElement('strong');
     title.append(marked(id, PLATFORM_LABELS[id]));
     const line = document.createElement('span');
-    line.textContent = typeof totals.views === 'number' ? `${fmt(totals.views)} views` : 'Not connected';
+    line.textContent = typeof platformTotal.views === 'number'
+      ? `${fmt(platformTotal.views)} views`
+      : typeof platformTotal.followers === 'number' ? `${fmt(platformTotal.followers)} followers` : '';
     chip.append(title, line);
     chips.append(chip);
   }

@@ -226,7 +226,7 @@ tr.is-top td:first-child { box-shadow: inset 2px 0 0 var(--red); }
 .av-handle { color: var(--muted); font-size: 12px; }
 .av-plats { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 6px 0 0; padding: 0; list-style: none; }
 .av-plats li { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
-.av-plats a { color: var(--cream); text-underline-offset: 3px; }
+.av-plats a { display: inline-flex; align-items: center; gap: 5px; color: var(--cream); text-underline-offset: 3px; }
 .av-missing { color: var(--muted); font-style: italic; font-weight: 400; }
 .av-partial { color: var(--gold); font-style: normal; font-size: 11px; letter-spacing: 0.04em; }
 .av-growth-up { color: var(--green); }
