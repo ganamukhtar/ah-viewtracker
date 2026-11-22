@@ -4,7 +4,7 @@ A standalone America House viewership page. It totals recorded views across the 
 
 The page is static HTML and vanilla ES modules, plus a small Node collector, so it can later move into the america.co site at a path like `/views`.
 
-Creator accounts are in the data and stay out of the home total until that category chip is selected. A platform that has not been read shows **Not connected**. It is never stored or added as zero.
+Creator accounts are in the data and are included in the home total. Category and platform both start on All. A platform that has not been read is left blank. It is never stored or added as zero.
 
 ## Run locally
 
@@ -24,11 +24,11 @@ TIKTOK_PUBLIC=1 npm run collect
 
 ## What the page does
 
-The home hero is Quests and fan pages on every platform. Creators stay off until that chip is selected on the accounts page. The gold title stays “The movement’s total viewership.” Under the red view total are followers, likes, and comments for the same accounts. A metric with no reading says Not connected.
+The home hero is every account on every platform. Category and platform both start on All, so Creators are included and the hero totals cover every account. The gold title stays “The movement’s total viewership.” Under the red view total are followers, likes, and comments for the same accounts. A metric with no reading is left blank.
 
-The view total is a whole number. It steps up as estimated views accumulate, so a slow pace moves less often. The count never steps down. A higher snapshot eases in. Followers, likes, and comments show the latest recorded totals for the current filter.
+The view total is a whole number. On load, the red total and the follower, like, and comment tiles count up from zero to the live value with an ease-out over about 2.25 seconds, then the view total steps up once a second as estimated views accumulate. That count-up lands on the live projected value. Reduced motion shows the live total immediately. After the opening count-up, the count never steps down. A higher snapshot eases in. Followers, likes, and comments then show the latest recorded totals for the current filter.
 
-**See all accounts** opens [/accounts](/accounts), a separate page with a compact total. Category and platform chips are multi-select. All is exclusive: choosing All clears the others, choosing a specific chip clears All, choosing a selected chip again turns it off, and an empty selection falls back to All. The default chips are Quests and Fan & news pages. Search still matches the name and the handle.
+**See all accounts** opens [/accounts](/accounts), a separate page with a compact total. Category and platform chips are multi-select. All is exclusive: choosing All clears the others, choosing a specific chip clears All, choosing a selected chip again turns it off, and an empty selection falls back to All. The default chips are All and All. Search still matches the name and the handle.
 
 ## Seed snapshot
 
@@ -36,7 +36,7 @@ The view total is a whole number. It steps up as estimated views accumulate, so 
 
 **TikTok returned real data for every configured TikTok account. YouTube, Instagram, and X are Not connected** until their keys are set.
 
-The default total (Creators off) is **11,007 views**. Five of the 24 accounts in that cohort have a view report:
+In that seed, the quests-and-fan total was **11,007 views**. Five of the 24 accounts in that cohort have a view report:
 
 | Account | Views | How it was read |
 | --- | ---: | --- |
@@ -48,7 +48,7 @@ The default total (Creators off) is **11,007 views**. Five of the 24 accounts in
 
 Partial means TikTok’s embed did not return every video on the profile, so the play sum is real and incomplete. It is included in the total and labeled. Followers and likes on those profiles are the profile totals, not a sample. America House DC, for example, was 113 followers and 910 likes.
 
-Creator accounts were read in the same pass and stay out of the hero until that chip is on. Public examples: @ganadelrey about 1,151,076 plays, 3,000,000 likes, and 13,400 followers; @robnelsonlive 398,218 plays and 180,100 likes; @talktometaylor 58,000 likes and 1,889 followers; @evolutionarybrandon 19,516 plays. Those play totals are the public embed’s list, so several are partial.
+Creator accounts were read in the same pass and are included in the hero by default. Public examples: @ganadelrey about 1,151,076 plays, 3,000,000 likes, and 13,400 followers; @robnelsonlive 398,218 plays and 180,100 likes; @talktometaylor 58,000 likes and 1,889 followers; @evolutionarybrandon 19,516 plays. Those play totals are the public embed’s list, so several are partial.
 
 Each TikTok platform also stores a `viewsPerSecond` pace from post age and play count. The view total uses that pace until a later snapshot shows a measured gain, and only displays whole views.
 
@@ -115,7 +115,7 @@ Edit accounts in `accounts.json`. Each entry has `id`, `handle`, `name`, `catego
 - A successful collect that leaves a field empty keeps the previous number for that field.
 - TikTok embed play counts are marked partial when fewer videos come back than the profile lists.
 - YouTube’s recent-video likes and comments are not lifetime totals and are not added to those columns.
-- The on-screen total never moves down. A higher snapshot eases in over about a second. A lower one is kept as the floor and the pace continues from there.
+- On load, the hero and the follower, like, and comment tiles count up from zero over about 2.25 seconds and land on the live value. Reduced motion skips that count-up. After it, the on-screen total never moves down. A higher snapshot eases in over about a second. A lower one is kept as the floor and the pace continues from there.
 
 ## Automatic refresh (no paid keys)
 

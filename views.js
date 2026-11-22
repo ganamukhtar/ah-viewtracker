@@ -1,6 +1,6 @@
 import { DEFAULT_FILTER, aggregate, growthFor, toggleSelection } from '/lib/aggregate.js';
 import { chooseRate, measuredRate } from '/lib/project.js';
-import { createLiveCounter } from '/lib/live.js';
+import { createLiveCounter, introDisplay, INTRO_MS } from '/lib/live.js';
 import { PLATFORM_LABELS, PLATFORM_ORDER } from '/lib/platforms.js';
 
 const CATEGORIES = [
@@ -25,6 +25,7 @@ const state = {
 let counter = createLiveCounter();
 let view = null;
 let totals = null;
+const intro = { startedAt: 0, reduced: false };
 
 const q = (sel, root = document) => root.querySelector(sel);
 
@@ -90,15 +91,37 @@ function paintStat(name, value) {
     node.classList.add('is-missing');
     return;
   }
-  node.textContent = value.toLocaleString('en-US');
+  node.textContent = Math.floor(value).toLocaleString('en-US');
   node.classList.remove('is-missing');
 }
 
-function paintFigure() {
+function beginIntro(now) {
+  if (intro.startedAt) return;
+  intro.startedAt = now;
+  intro.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!intro.reduced) requestAnimationFrame(runIntro);
+}
+
+function runIntro() {
+  paintFigure();
+  if (Date.now() - intro.startedAt < INTRO_MS) requestAnimationFrame(runIntro);
+}
+
+function displayValue(live, now = Date.now()) {
+  if (!intro.startedAt) return live;
+  return introDisplay(live, now - intro.startedAt, INTRO_MS, intro.reduced);
+}
+
+function heroHasNumber() {
+  if (typeof totals?.views === 'number') return true;
+  return ['followers', 'likes', 'comments'].some((key) => typeof totals?.[key] === 'number');
+}
+
+function paintFigure(now = Date.now()) {
   const figure = q('[data-figure]');
   const valueNode = q('[data-value]');
   const rise = q('[data-rise]');
-  const value = counter.sample(Date.now());
+  const value = displayValue(counter.sample(now), now);
   const whole = typeof value === 'number' ? Math.floor(value) : null;
   if (whole == null) {
     valueNode.textContent = state.snapshot ? '' : 'Checking…';
@@ -109,9 +132,9 @@ function paintFigure() {
     valueNode.classList.remove('is-text');
     if (rise) rise.hidden = !(state.rate > 0);
   }
-  paintStat('followers', totals?.followers);
-  paintStat('likes', totals?.likes);
-  paintStat('comments', totals?.comments);
+  paintStat('followers', displayValue(totals?.followers, now));
+  paintStat('likes', displayValue(totals?.likes, now));
+  paintStat('comments', displayValue(totals?.comments, now));
   const confirmed = state.snapshot ? checkedLine(state.snapshot.checkedAt) : 'Checking the latest reports…';
   const line = q('[data-confirmed]');
   if (line.textContent !== confirmed) line.textContent = confirmed;
@@ -121,20 +144,21 @@ function paintFigure() {
 }
 
 function retarget(reset) {
+  const now = Date.now();
   view = state.snapshot ? aggregate(state.snapshot, currentFilter()) : null;
   totals = state.snapshot ? aggregate(state.snapshot, totalsFilter()) : null;
   if (!totals || typeof totals.views !== 'number') {
     counter = createLiveCounter();
     state.rate = 0;
-    paintFigure();
-    return;
+  } else {
+    const measured = measuredRate(state.snapshot.history, { accounts: state.snapshot.accounts }, totalsFilter());
+    const choice = chooseRate(measured.perSecond, totals.velocityPerSecond);
+    if (reset) counter = createLiveCounter();
+    state.rate = choice.perSecond;
+    counter.push(totals.views, choice.perSecond, now);
   }
-  const measured = measuredRate(state.snapshot.history, { accounts: state.snapshot.accounts }, totalsFilter());
-  const choice = chooseRate(measured.perSecond, totals.velocityPerSecond);
-  if (reset) counter = createLiveCounter();
-  state.rate = choice.perSecond;
-  counter.push(totals.views, choice.perSecond, Date.now());
-  paintFigure();
+  if (heroHasNumber()) beginIntro(now);
+  paintFigure(now);
 }
 
 function metricCell(value, partial) {

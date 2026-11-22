@@ -2,9 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { num, sumNumbers } from '../lib/num.js';
 import { mergePlatform } from '../lib/platforms.js';
-import { aggregate, growthFor, toggleSelection } from '../lib/aggregate.js';
+import { aggregate, DEFAULT_FILTER, growthFor, toggleSelection } from '../lib/aggregate.js';
 import { chooseRate, estimateAt, measuredRate } from '../lib/project.js';
-import { createLiveCounter } from '../lib/live.js';
+import { createLiveCounter, introDisplay, INTRO_MS } from '../lib/live.js';
 import { velocityFromVideos } from '../collector/tiktok.js';
 import { combineTikTok, parseTikTokEmbed, parseTikTokProfile } from '../collector/tiktok.js';
 import { interpretApifyItems } from '../collector/apify-tiktok.js';
@@ -68,16 +68,18 @@ const snapshot = {
   ],
 };
 
-test('creators are off by default and nulls are not zeros', () => {
+test('all accounts and platforms are included by default and nulls are not zeros', () => {
+  assert.deepEqual(DEFAULT_FILTER.categories, ['all']);
+  assert.deepEqual(DEFAULT_FILTER.platforms, ['all']);
   const view = aggregate(snapshot);
-  assert.equal(view.matched, 2);
-  assert.equal(view.views, 150);
-  assert.equal(view.likes, 5);
-  assert.equal(view.comments, 3);
-  assert.equal(view.followers, 28);
+  assert.equal(view.matched, 3);
+  assert.equal(view.views, 1149);
+  assert.equal(view.likes, 45);
+  assert.equal(view.comments, 4);
+  assert.equal(view.followers, 98);
   assert.equal(view.viewsPartial, true);
   assert.equal(view.platformTotals.youtube.views, null);
-  assert.equal(view.platformTotals.tiktok.views, 150);
+  assert.equal(view.platformTotals.tiktok.views, 1149);
 });
 
 test('multi-select filters recompute totals and All is exclusive', () => {
@@ -109,6 +111,34 @@ test('growth uses a snapshot at least a day old and ignores null history', () =>
     { checkedAt: '2026-11-21T12:00:00.000Z', accounts: { quest: { tiktok: { views: 80 } } } },
   ], account, 'views', 'all', now);
   assert.equal(tooSoon, null);
+});
+
+test('the opening count-up eases from zero onto the live value', () => {
+  assert.equal(introDisplay(75518, 0, INTRO_MS, false), 0);
+  const halfway = introDisplay(1000, INTRO_MS / 2, INTRO_MS, false);
+  assert.ok(Math.abs(halfway - 968.75) < 0.001);
+  assert.ok(halfway > 900);
+  const projected = 75518 + 0.5 * (INTRO_MS / 1000);
+  assert.equal(introDisplay(projected, INTRO_MS, INTRO_MS, false), projected);
+  assert.equal(introDisplay(projected, INTRO_MS + 1000, INTRO_MS, false), projected);
+  assert.equal(introDisplay(75518, 0, INTRO_MS, true), 75518);
+  assert.equal(Math.floor(introDisplay(1000.9, INTRO_MS, INTRO_MS, false)), 1000);
+  const lateLive = 5000000;
+  const late = introDisplay(lateLive, INTRO_MS - 16, INTRO_MS, false);
+  assert.ok(Math.abs(late - lateLive) < 1);
+  const counter = createLiveCounter();
+  const start = 1_700_000_000_000;
+  counter.push(1200, 0.4, start);
+  let previous = 0;
+  for (let elapsed = 0; elapsed <= INTRO_MS; elapsed += 16) {
+    const live = counter.sample(start + elapsed);
+    const shown = Math.floor(introDisplay(live, elapsed, INTRO_MS, false));
+    assert.equal(Number.isInteger(shown), true);
+    assert.ok(shown >= previous);
+    previous = shown;
+  }
+  const landed = counter.sample(start + INTRO_MS);
+  assert.equal(Math.floor(introDisplay(landed, INTRO_MS, INTRO_MS, false)), Math.floor(landed));
 });
 
 test('the live counter climbs every moment and never steps down', () => {
