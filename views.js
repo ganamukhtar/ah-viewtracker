@@ -87,7 +87,7 @@ function paintStat(name, value) {
     return;
   }
   if (typeof value !== 'number') {
-    node.textContent = '';
+    node.textContent = '—';
     node.classList.add('is-missing');
     return;
   }
@@ -124,7 +124,7 @@ function paintFigure(now = Date.now()) {
   const value = displayValue(counter.sample(now), now);
   const whole = typeof value === 'number' ? Math.floor(value) : null;
   if (whole == null) {
-    valueNode.textContent = state.snapshot ? '' : 'Checking…';
+    valueNode.textContent = state.snapshot ? 'Views unavailable' : 'Checking…';
     valueNode.classList.add('is-text');
     if (rise) rise.hidden = true;
   } else {
@@ -164,7 +164,8 @@ function retarget(reset) {
 function metricCell(value, partial) {
   const span = document.createElement('span');
   if (typeof value !== 'number') {
-    span.textContent = '';
+    span.textContent = '—';
+    span.title = 'No verified count available';
     span.className = 'av-missing';
     return span;
   }
@@ -208,7 +209,8 @@ function platformLine(platform) {
     missing.className = 'av-missing';
     const parts = [];
     if (typeof platform.followers === 'number') parts.push(`${platform.followers.toLocaleString('en-US')} followers`);
-    missing.textContent = parts.length ? ` ${parts.join(' · ')}` : '';
+    if (typeof platform.posts === 'number') parts.push(`${fmt(platform.posts)} posts`);
+    missing.textContent = parts.length ? ` ${parts.join(' · ')}` : ' · Awaiting data';
     detail.append(missing);
   }
   item.append(detail);
@@ -231,6 +233,12 @@ function detailCard(platform) {
     if (typeof value !== 'number') continue;
     line.textContent = `${label} · ${value.toLocaleString('en-US')}`;
     card.append(line);
+  }
+  if (platform.id === 'instagram') {
+    const status = document.createElement('p');
+    const date = platform.observedAt ? new Date(platform.observedAt).toLocaleString() : null;
+    status.textContent = [date && `Last reading · ${date}`, platform.error, platform.views == null && 'View count unavailable'].filter(Boolean).join(' · ');
+    card.append(status);
   }
   if (platform.viewsNote) {
     const note = document.createElement('p');

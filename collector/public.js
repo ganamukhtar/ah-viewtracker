@@ -105,31 +105,28 @@ export async function collectYouTubePublic(spec) {
 
 // ---------- Instagram public profile (followers) ----------
 
-const CRAWLER_UA = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
+export function instagramProfileCounts(html, handle) {
+  const canonical = html.match(/<meta property="og:url" content="https:\/\/www\.instagram\.com\/([^/"?]+)\/?"/i);
+  if (canonical?.[1]?.toLowerCase() !== handle.toLowerCase()) {
+    return { ok: false, error: 'Instagram did not return the requested public profile' };
+  }
+  const description = html.match(/<meta property="og:description" content="([^"]*)"/i)?.[1] || '';
+  const count = (label) => {
+    const match = description.match(new RegExp('([0-9.,]+[KMB]?)\\s+' + label + '\\b', 'i'));
+    return match ? parseCount(match[1]) : null;
+  };
+  const followers = count('Followers?');
+  if (followers == null) return { ok: false, error: 'Public follower count unavailable' };
+  return { ok: true, source: 'instagram-public-profile', followers, posts: count('Posts?') };
+}
 
 export async function collectInstagramPublic(handle) {
   const name = String(handle).replace(/^@/, '');
-  let lastError = 'Instagram profile was not readable';
-  for (let attempt = 0; attempt < 3; attempt += 1) {
-    if (attempt) await new Promise((resolve) => setTimeout(resolve, 2500 * attempt));
-    let res;
-    try { res = await fetchText(`https://www.instagram.com/${encodeURIComponent(name)}/`, { headers: { 'user-agent': CRAWLER_UA } }); }
-    catch (error) { lastError = `Instagram request failed (${error.message})`; continue; }
-    if (res.status === 404) return { ok: false, error: 'Instagram profile not found' };
-    if (!res.ok) { lastError = `Instagram HTTP ${res.status}`; continue; }
-    const meta = res.text.match(/<meta property="og:description" content="([^"]*)"/);
-    if (!meta) { lastError = 'Instagram profile did not include public counts'; continue; }
-    const followers = meta[1].match(/([0-9.,]+[KMB]?)\s+Followers/i);
-    const posts = meta[1].match(/([0-9.,]+[KMB]?)\s+Posts/i);
-    if (!followers) { lastError = 'Instagram follower count missing'; continue; }
-    return {
-      ok: true,
-      source: 'instagram-public-profile',
-      followers: parseCount(followers[1]),
-      viewsListed: posts ? parseCount(posts[1]) : null,
-    };
-  }
-  return { ok: false, error: lastError };
+  const response = await fetchText(`https://www.instagram.com/${encodeURIComponent(name)}/`, {
+    headers: { 'user-agent': 'ah-viewtracker/1.0' },
+  });
+  if (!response.ok) return { ok: false, error: `Instagram HTTP ${response.status}` };
+  return instagramProfileCounts(response.text, name);
 }
 
 // ---------- X public profile (followers) ----------

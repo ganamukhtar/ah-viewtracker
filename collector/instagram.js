@@ -65,6 +65,7 @@ export async function collectInstagram(account, env) {
     ok: true,
     source: 'instagram-graph-business-discovery',
     followers,
+    posts: mediaCount,
     likes,
     comments,
     views,

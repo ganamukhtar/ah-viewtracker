@@ -125,8 +125,11 @@
       "handle": "tellscreenquests",
       "name": "TellScreen Quests",
       "category": "quests",
-      "platforms": {},
-      "notes": "No public profile found on TikTok, Instagram, YouTube, or X as of 2026-11-22."
+      "platforms": {
+        "instagram": {
+          "handle": "tellscreenquest"
+        }
+      }
     },
     {
       "id": "cocreatorquest",
