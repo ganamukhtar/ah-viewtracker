@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aggregated views | America.co</title>
+  <meta name="description" content="Total recorded views across America House accounts on TikTok, Instagram, YouTube, and X.">
+  <meta name="theme-color" content="#0a1128">
+  <meta property="og:title" content="The movement’s total viewership">
+  <meta property="og:description" content="Recorded views across connected America House accounts.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg">
+  <link rel="stylesheet" href="/styles/fonts.css">
+  <link rel="stylesheet" href="/styles/views.css">
+</head>
+<body data-page="home">
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="site-frame" aria-hidden="true"></div>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main">
+      <a class="brand" href="https://america.co/">AMERICA<span>.CO</span></a>
+      <div class="nav-links">
+        <a href="https://america.co/quests">Quests</a>
+        <a href="/" aria-current="page">Viewership</a>
+        <a class="nav-cta" href="/accounts">See all accounts</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="movement-pulse" id="top" aria-labelledby="pulse-title">
+      <header class="mp-scoreboard">
+        <p class="eyebrow">America House · Aggregated views</p>
+        <h1 id="pulse-title">The movement’s total viewership</h1>
+        <p class="mp-total-label is-waiting" data-label>Live view feed</p>
+        <a class="mp-total" href="/accounts" data-figure aria-label="Checking the latest reports">
+          <span class="mp-rise" data-rise hidden aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M6 1.5l4.5 6H1.5z" fill="currentColor"/></svg></span>
+          <span class="mp-live-value is-text" data-value>Checking…</span>
+        </a>
+        <div class="av-reach" data-reach>
+          <article><span>Followers</span><strong data-stat="followers">…</strong></article>
+          <article><span>Likes</span><strong data-stat="likes">…</strong></article>
+          <article><span>Comments</span><strong data-stat="comments">…</strong></article>
+        </div>
+        <p class="mp-estimate-note" data-note>Across connected accounts</p>
+        <p class="mp-confirmed" data-confirmed aria-live="polite">Checking the latest reports…</p>
+      </header>
+      <p class="av-jump"><a class="mp-join" href="/accounts">See all accounts</a></p>
+    </section>
+  </main>
+  <script type="module" src="/views.js"></script>
+  <noscript>
+    <p class="av-noscript">This page needs JavaScript to read the view feed. The latest snapshot is at <a href="/data/snapshot.json">/data/snapshot.json</a>.</p>
+  </noscript>
+</body>
+</html>

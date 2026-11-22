@@ -1,0 +1,1369 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-22T00:58:52.371Z",
+  "snapshotUpdatedAt": "2026-11-22T00:58:52.371Z",
+  "feedMode": "published",
+  "meaning": "Recorded views, likes, comments, and followers. Not unique people. A missing or unconnected platform is left out of every total and is never stored as zero. Partial view counts are real sums of the public posts that were readable, not lifetime totals. The live estimate, when shown, adds the measured growth rate to the last recorded total and is not itself an observation.",
+  "collectors": {
+    "youtube": {
+      "enabled": false,
+      "reason": "Set YOUTUBE_API_KEY to collect channel views and subscribers."
+    },
+    "instagram": {
+      "enabled": false,
+      "reason": "Set IG_BUSINESS_ACCOUNT_ID and IG_ACCESS_TOKEN to collect Instagram."
+    },
+    "x": {
+      "enabled": false,
+      "reason": "Set X_BEARER_TOKEN to collect X followers and post metrics."
+    },
+    "tiktok": {
+      "enabled": true,
+      "mode": "public-profile"
+    }
+  },
+  "warnings": [],
+  "coverage": {
+    "accounts": 34,
+    "defaultCohort": 24,
+    "withViews": 5,
+    "partial": true,
+    "complete": false
+  },
+  "projection": {
+    "version": 1,
+    "cohort": "quests and fan pages, all platforms, creators excluded",
+    "recorded": 11007,
+    "perSecond": 0,
+    "anchorAt": "2026-11-22T00:58:52.371Z",
+    "basis": "Latest recorded view total minus the prior snapshot, divided by elapsed seconds.",
+    "basisStart": "2026-11-22T00:27:16.923Z",
+    "basisEnd": "2026-11-22T00:58:52.371Z"
+  },
+  "accounts": [
+    {
+      "id": "questforworldpeace",
+      "handle": "questforworldpeace",
+      "name": "Quest for World Peace",
+      "category": "quests",
+      "notes": null,
+      "platforms": {
+        "youtube": {
+          "handle": "questforworldpeace",
+          "url": "https://www.youtube.com/@questforworldpeace",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        },
+        "tiktok": {
+          "handle": "questforworldpeace",
+          "url": "https://www.tiktok.com/@questforworldpeace",
+          "status": "available",
+          "views": 6335,
+          "likes": 476,
+          "comments": null,
+          "followers": 90,
+          "viewsComplete": true,
+          "viewsCounted": 7,
+          "viewsListed": 7,
+          "viewsMethod": "sum_of_public_embed_videos",
+          "viewsNote": "Sum of play counts on 7 public videos.",
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "viewsPerSecond": 0.008641511309905883,
+          "observedAt": "2026-11-22T00:58:52.371Z",
+          "checkedAt": "2026-11-22T00:58:52.371Z",
+          "source": "tiktok-public-profile",
+          "error": null
+        },
+        "instagram": {
+          "handle": "questforworldpeace",
+          "url": "https://www.instagram.com/questforworldpeace/",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "questforthepeople",
+      "handle": "questforthepeople",
+      "name": "Quest for the People",
+      "category": "quests",
+      "notes": null,
+      "platforms": {}
+    },
+    {
+      "id": "questforpresident",
+      "handle": "questforpresident",
+      "name": "Quest for President",
+      "category": "quests",
+      "notes": null,
+      "platforms": {
+        "instagram": {
+          "handle": "questforpresident",
+          "url": "https://www.instagram.com/questforpresident/",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "questforwhitehouse",
+      "handle": "questforwhitehouse",
+      "name": "Quest for the White House",
+      "category": "quests",
+      "notes": null,
+      "platforms": {
+        "instagram": {
+          "handle": "questforwhitehouse",
+          "url": "https://www.instagram.com/questforwhitehouse/",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "questforquest",
+      "handle": "questforquest",
+      "name": "Quest for Quest",
+      "category": "quests",
+      "notes": "X @questforquest is an unrelated person and is intentionally not configured.",
+      "platforms": {
+        "youtube": {
+          "handle": "questforquest",
+          "url": "https://www.youtube.com/@questforquest",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "questfordebagle",
+      "handle": "questfordebagle",
+      "name": "Quest for de Bagel",
+      "category": "quests",
+      "notes": null,
+      "platforms": {
+        "instagram": {
+          "handle": "questfordebagle",
+          "url": "https://www.instagram.com/questfordebagle/",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "meetfulquest",
+      "handle": "meetfulquest",
+      "name": "Meetful Quest",
+      "category": "quests",
+      "notes": null,
+      "platforms": {}
+    },
+    {
+      "id": "coherencequests",
+      "handle": "coherencequests",
+      "name": "Coherence Quests",
+      "category": "quests",
+      "notes": null,
+      "platforms": {}
+    },
+    {
+      "id": "earthsquests",
+      "handle": "earthsquests",
+      "name": "Earth's Quests",
+      "category": "quests",
+      "notes": null,
+      "platforms": {}
+    },
+    {
+      "id": "tellscreenquests",
+      "handle": "tellscreenquests",
+      "name": "TellScreen Quests",
+      "category": "quests",
+      "notes": null,
+      "platforms": {}
+    },
+    {
+      "id": "cocreatorquest",
+      "handle": "cocreatorquest",
+      "name": "Co-creator Quest",
+      "category": "quests",
+      "notes": null,
+      "platforms": {}
+    },
+    {
+      "id": "placeboquest",
+      "handle": "placeboquest",
+      "name": "Placebo Quest",
+      "category": "quests",
+      "notes": null,
+      "platforms": {}
+    },
+    {
+      "id": "arcadefunquest",
+      "handle": "arcadefunquest",
+      "name": "Arcade Fun Quest",
+      "category": "quests",
+      "notes": null,
+      "platforms": {}
+    },
+    {
+      "id": "arcadefunquests",
+      "handle": "arcadefunquests",
+      "name": "Arcade Fun Quests",
+      "category": "quests",
+      "notes": null,
+      "platforms": {}
+    },
+    {
+      "id": "uapquest",
+      "handle": "uapquest",
+      "name": "UAP Quest",
+      "category": "quests",
+      "notes": null,
+      "platforms": {}
+    },
+    {
+      "id": "americahousenews",
+      "handle": "americahousenews",
+      "name": "America House News",
+      "category": "fan",
+      "notes": null,
+      "platforms": {}
+    },
+    {
+      "id": "lightmirrornews",
+      "handle": "lightmirrornews",
+      "name": "Light Mirror News",
+      "category": "fan",
+      "notes": null,
+      "platforms": {}
+    },
+    {
+      "id": "fakefornownews",
+      "handle": "fakefornownews",
+      "name": "Fake For Now News",
+      "category": "fan",
+      "notes": null,
+      "platforms": {}
+    },
+    {
+      "id": "americavlogged",
+      "handle": "americavlogged",
+      "name": "America Vlogged",
+      "category": "fan",
+      "notes": null,
+      "platforms": {}
+    },
+    {
+      "id": "americaclipping",
+      "handle": "americaclipping",
+      "name": "America Clipping",
+      "category": "fan",
+      "notes": null,
+      "platforms": {
+        "youtube": {
+          "handle": "americaclipping",
+          "url": "https://www.youtube.com/@americaclipping",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        },
+        "tiktok": {
+          "handle": "americaclipping",
+          "url": "https://www.tiktok.com/@americaclipping",
+          "status": "available",
+          "views": 124,
+          "likes": 3,
+          "comments": null,
+          "followers": 2,
+          "viewsComplete": true,
+          "viewsCounted": 1,
+          "viewsListed": 1,
+          "viewsMethod": "sum_of_public_embed_videos",
+          "viewsNote": "Sum of play counts on 1 public videos.",
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "viewsPerSecond": 0.0003636178724412727,
+          "observedAt": "2026-11-22T00:58:52.371Z",
+          "checkedAt": "2026-11-22T00:58:52.371Z",
+          "source": "tiktok-public-profile",
+          "error": null
+        },
+        "x": {
+          "handle": "Americaclipping",
+          "url": "https://x.com/Americaclipping",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "americahousedc",
+      "handle": "americahousedc",
+      "name": "America House DC",
+      "category": "fan",
+      "notes": null,
+      "platforms": {
+        "youtube": {
+          "handle": "americahousedc",
+          "url": "https://www.youtube.com/@americahousedc",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        },
+        "tiktok": {
+          "handle": "americahousedc",
+          "url": "https://www.tiktok.com/@americahousedc",
+          "status": "partial",
+          "views": 4516,
+          "likes": 910,
+          "comments": null,
+          "followers": 113,
+          "viewsComplete": false,
+          "viewsCounted": 10,
+          "viewsListed": 39,
+          "viewsMethod": "sum_of_public_embed_videos",
+          "viewsNote": "Sum of play counts on 10 of 39 videos TikTok's public embed returned. Not a lifetime total.",
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "viewsPerSecond": 0.007934508943924364,
+          "observedAt": "2026-11-22T00:58:52.371Z",
+          "checkedAt": "2026-11-22T00:58:52.371Z",
+          "source": "tiktok-public-profile",
+          "error": null
+        },
+        "x": {
+          "handle": "americahousedc",
+          "url": "https://x.com/americahousedc",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        },
+        "instagram": {
+          "handle": "americahousedc",
+          "url": "https://www.instagram.com/americahousedc/",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "buildnewamerica",
+      "handle": "buildnewamerica",
+      "name": "Build New America",
+      "category": "fan",
+      "notes": null,
+      "platforms": {
+        "instagram": {
+          "handle": "buildnewamerica",
+          "url": "https://www.instagram.com/buildnewamerica/",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "brandonconceicaopodcast",
+      "handle": "brandonconceicaopodcast",
+      "name": "Brandon Conceicao Podcast",
+      "category": "fan",
+      "notes": null,
+      "platforms": {
+        "youtube": {
+          "handle": "brandonconceicaopodcast",
+          "url": "https://www.youtube.com/@brandonconceicaopodcast",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        },
+        "tiktok": {
+          "handle": "brandonconceicaopodcast",
+          "url": "https://www.tiktok.com/@brandonconceicaopodcast",
+          "status": "partial",
+          "views": 32,
+          "likes": 3,
+          "comments": null,
+          "followers": 19,
+          "viewsComplete": false,
+          "viewsCounted": 10,
+          "viewsListed": 23,
+          "viewsMethod": "sum_of_public_embed_videos",
+          "viewsNote": "Sum of play counts on 10 of 23 videos TikTok's public embed returned. Not a lifetime total.",
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "viewsPerSecond": 0.00007607012753702747,
+          "observedAt": "2026-11-22T00:58:52.371Z",
+          "checkedAt": "2026-11-22T00:58:52.371Z",
+          "source": "tiktok-public-profile",
+          "error": null
+        },
+        "instagram": {
+          "handle": "brandonconceicaopodcast",
+          "url": "https://www.instagram.com/brandonconceicaopodcast/",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "brandondebates",
+      "handle": "brandondebates",
+      "name": "Brandon Debates",
+      "category": "fan",
+      "notes": null,
+      "platforms": {
+        "tiktok": {
+          "handle": "brandondebates",
+          "url": "https://www.tiktok.com/@brandondebates",
+          "status": "available",
+          "views": 0,
+          "likes": 0,
+          "comments": null,
+          "followers": 0,
+          "viewsComplete": true,
+          "viewsCounted": 0,
+          "viewsListed": 0,
+          "viewsMethod": "sum_of_public_embed_videos",
+          "viewsNote": "The public profile lists no videos, so recorded plays are 0.",
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "viewsPerSecond": null,
+          "observedAt": "2026-11-22T00:58:52.371Z",
+          "checkedAt": "2026-11-22T00:58:52.371Z",
+          "source": "tiktok-public-profile",
+          "error": null
+        },
+        "x": {
+          "handle": "brandondebates",
+          "url": "https://x.com/brandondebates",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        },
+        "instagram": {
+          "handle": "brandondebates",
+          "url": "https://www.instagram.com/brandondebates/",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "claytoncuteri",
+      "handle": "claytoncuteri",
+      "name": "Clayton Cuteri",
+      "category": "creators",
+      "notes": null,
+      "platforms": {
+        "tiktok": {
+          "handle": "claytoncuteri",
+          "url": "https://www.tiktok.com/@claytoncuteri",
+          "status": "available",
+          "views": 534,
+          "likes": 12,
+          "comments": null,
+          "followers": 41,
+          "viewsComplete": true,
+          "viewsCounted": 2,
+          "viewsListed": 2,
+          "viewsMethod": "sum_of_public_embed_videos",
+          "viewsNote": "Sum of play counts on 2 public videos.",
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "viewsPerSecond": 0.00001565865343211952,
+          "observedAt": "2026-11-22T00:58:52.371Z",
+          "checkedAt": "2026-11-22T00:58:52.371Z",
+          "source": "tiktok-public-profile",
+          "error": null
+        },
+        "x": {
+          "handle": "ClaytonCuteri",
+          "url": "https://x.com/ClaytonCuteri",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "brandon_conceicao",
+      "handle": "brandon_conceicao",
+      "name": "Brandon Conceicao",
+      "category": "creators",
+      "notes": null,
+      "platforms": {
+        "instagram": {
+          "handle": "brandon_conceicao",
+          "url": "https://www.instagram.com/brandon_conceicao/",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "drserbyn",
+      "handle": "drserbyn",
+      "name": "Dr. Serbyn",
+      "category": "creators",
+      "notes": null,
+      "platforms": {
+        "x": {
+          "handle": "drserbyn",
+          "url": "https://x.com/drserbyn",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "robnelsonlive",
+      "handle": "robnelsonlive",
+      "name": "Rob Nelson",
+      "category": "creators",
+      "notes": null,
+      "platforms": {
+        "youtube": {
+          "handle": "robnelsonlive",
+          "url": "https://www.youtube.com/@robnelsonlive",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        },
+        "tiktok": {
+          "handle": "robnelsonlive",
+          "url": "https://www.tiktok.com/@robnelsonlive",
+          "status": "partial",
+          "views": 398218,
+          "likes": 180100,
+          "comments": null,
+          "followers": 9498,
+          "viewsComplete": false,
+          "viewsCounted": 10,
+          "viewsListed": 28,
+          "viewsMethod": "sum_of_public_embed_videos",
+          "viewsNote": "Sum of play counts on 10 of 28 videos TikTok's public embed returned. Not a lifetime total.",
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "viewsPerSecond": 0.00003301431228633326,
+          "observedAt": "2026-11-22T00:58:52.371Z",
+          "checkedAt": "2026-11-22T00:58:52.371Z",
+          "source": "tiktok-public-profile",
+          "error": null
+        },
+        "x": {
+          "handle": "robnelsonlive",
+          "url": "https://x.com/robnelsonlive",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "talktometaylor",
+      "handle": "talktometaylor",
+      "name": "Talk to Me Taylor",
+      "category": "creators",
+      "notes": null,
+      "platforms": {
+        "youtube": {
+          "handle": "talktometaylor",
+          "url": "https://www.youtube.com/@talktometaylor",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        },
+        "tiktok": {
+          "handle": "talktometaylor",
+          "url": "https://www.tiktok.com/@talktometaylor",
+          "status": "partial",
+          "views": 1084,
+          "likes": 58000,
+          "comments": null,
+          "followers": 1889,
+          "viewsComplete": false,
+          "viewsCounted": 11,
+          "viewsListed": 655,
+          "viewsMethod": "sum_of_public_embed_videos",
+          "viewsNote": "Sum of play counts on 11 of 655 videos TikTok's public embed returned. Not a lifetime total.",
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "viewsPerSecond": 0.0011496305281996975,
+          "observedAt": "2026-11-22T00:58:52.371Z",
+          "checkedAt": "2026-11-22T00:58:52.371Z",
+          "source": "tiktok-public-profile",
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "prophetnode",
+      "handle": "prophetnode",
+      "name": "Prophet Node",
+      "category": "creators",
+      "notes": null,
+      "platforms": {
+        "x": {
+          "handle": "Prophetnode",
+          "url": "https://x.com/Prophetnode",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "sydney.thackray",
+      "handle": "sydney.thackray",
+      "name": "Sydney Thackray",
+      "category": "creators",
+      "notes": null,
+      "platforms": {
+        "tiktok": {
+          "handle": "sydney.thackray",
+          "url": "https://www.tiktok.com/@sydney.thackray",
+          "status": "partial",
+          "views": 16928,
+          "likes": 829,
+          "comments": null,
+          "followers": 288,
+          "viewsComplete": false,
+          "viewsCounted": 10,
+          "viewsListed": 13,
+          "viewsMethod": "sum_of_public_embed_videos",
+          "viewsNote": "Sum of play counts on 10 of 13 videos TikTok's public embed returned. Not a lifetime total.",
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "viewsPerSecond": 0.00006390006085565018,
+          "observedAt": "2026-11-22T00:58:52.371Z",
+          "checkedAt": "2026-11-22T00:58:52.371Z",
+          "source": "tiktok-public-profile",
+          "error": null
+        },
+        "x": {
+          "handle": "SydneyThackray",
+          "url": "https://x.com/SydneyThackray",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "ganadelrey",
+      "handle": "ganadelrey",
+      "name": "Gana Del Rey",
+      "category": "creators",
+      "notes": null,
+      "platforms": {
+        "tiktok": {
+          "handle": "ganadelrey",
+          "url": "https://www.tiktok.com/@ganadelrey",
+          "status": "partial",
+          "views": 1151076,
+          "likes": 3000000,
+          "comments": null,
+          "followers": 13400,
+          "viewsComplete": false,
+          "viewsCounted": 11,
+          "viewsListed": 1251,
+          "viewsMethod": "sum_of_public_embed_videos",
+          "viewsNote": "Sum of play counts on 11 of 1251 videos TikTok's public embed returned. Not a lifetime total.",
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "viewsPerSecond": 0.22705774583709423,
+          "observedAt": "2026-11-22T00:58:52.371Z",
+          "checkedAt": "2026-11-22T00:58:52.371Z",
+          "source": "tiktok-public-profile",
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "evolutionarybrandon",
+      "handle": "evolutionarybrandon",
+      "name": "Evolutionary Brandon",
+      "category": "creators",
+      "notes": null,
+      "platforms": {
+        "youtube": {
+          "handle": "evolutionarybrandon",
+          "url": "https://www.youtube.com/@evolutionarybrandon",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        },
+        "tiktok": {
+          "handle": "evolutionarybrandon",
+          "url": "https://www.tiktok.com/@evolutionarybrandon",
+          "status": "available",
+          "views": 19516,
+          "likes": 1165,
+          "comments": null,
+          "followers": 165,
+          "viewsComplete": true,
+          "viewsCounted": 7,
+          "viewsListed": 7,
+          "viewsMethod": "sum_of_public_embed_videos",
+          "viewsNote": "Sum of play counts on 7 public videos.",
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "viewsPerSecond": 0.0215146936174229,
+          "observedAt": "2026-11-22T00:58:52.371Z",
+          "checkedAt": "2026-11-22T00:58:52.371Z",
+          "source": "tiktok-public-profile",
+          "error": null
+        },
+        "instagram": {
+          "handle": "evolutionarybrandon",
+          "url": "https://www.instagram.com/evolutionarybrandon/",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    },
+    {
+      "id": "clayton.financial",
+      "handle": "clayton.financial",
+      "name": "Clayton Financial",
+      "category": "creators",
+      "notes": null,
+      "platforms": {
+        "youtube": {
+          "handle": "clayton.financial",
+          "url": "https://www.youtube.com/@clayton.financial",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        },
+        "tiktok": {
+          "handle": "clayton.financial",
+          "url": "https://www.tiktok.com/@clayton.financial",
+          "status": "available",
+          "views": 45,
+          "likes": 10,
+          "comments": null,
+          "followers": 6,
+          "viewsComplete": true,
+          "viewsCounted": 4,
+          "viewsListed": 4,
+          "viewsMethod": "sum_of_public_embed_videos",
+          "viewsNote": "Sum of play counts on 4 public videos.",
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "viewsPerSecond": 3.117084925532377e-7,
+          "observedAt": "2026-11-22T00:58:52.371Z",
+          "checkedAt": "2026-11-22T00:58:52.371Z",
+          "source": "tiktok-public-profile",
+          "error": null
+        },
+        "instagram": {
+          "handle": "clayton.financial",
+          "url": "https://www.instagram.com/clayton.financial/",
+          "status": "unavailable",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": null,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "observedAt": null,
+          "checkedAt": null,
+          "source": null,
+          "error": null
+        }
+      }
+    }
+  ],
+  "history": [
+    {
+      "checkedAt": "2026-11-22T00:27:16.923Z",
+      "accounts": {
+        "questforworldpeace": {
+          "tiktok": {
+            "views": 6335,
+            "likes": 476,
+            "followers": 90
+          }
+        },
+        "americaclipping": {
+          "tiktok": {
+            "views": 124,
+            "likes": 3,
+            "followers": 2
+          }
+        },
+        "americahousedc": {
+          "tiktok": {
+            "views": 4516,
+            "likes": 910,
+            "followers": 113
+          }
+        },
+        "brandonconceicaopodcast": {
+          "tiktok": {
+            "views": 32,
+            "likes": 3,
+            "followers": 19
+          }
+        },
+        "brandondebates": {
+          "tiktok": {
+            "views": 0,
+            "likes": 0,
+            "followers": 0
+          }
+        },
+        "claytoncuteri": {
+          "tiktok": {
+            "views": 534,
+            "likes": 12,
+            "followers": 41
+          }
+        },
+        "robnelsonlive": {
+          "tiktok": {
+            "views": 398218,
+            "likes": 180100,
+            "followers": 9498
+          }
+        },
+        "talktometaylor": {
+          "tiktok": {
+            "views": 1084,
+            "likes": 58000,
+            "followers": 1889
+          }
+        },
+        "sydney.thackray": {
+          "tiktok": {
+            "views": 16928,
+            "likes": 829,
+            "followers": 288
+          }
+        },
+        "ganadelrey": {
+          "tiktok": {
+            "views": 1151857,
+            "likes": 3000000,
+            "followers": 13400
+          }
+        },
+        "evolutionarybrandon": {
+          "tiktok": {
+            "views": 19412,
+            "likes": 1164,
+            "followers": 165
+          }
+        },
+        "clayton.financial": {
+          "tiktok": {
+            "views": 45,
+            "likes": 10,
+            "followers": 6
+          }
+        }
+      }
+    },
+    {
+      "checkedAt": "2026-11-22T00:58:52.371Z",
+      "accounts": {
+        "questforworldpeace": {
+          "tiktok": {
+            "views": 6335,
+            "likes": 476,
+            "followers": 90
+          }
+        },
+        "americaclipping": {
+          "tiktok": {
+            "views": 124,
+            "likes": 3,
+            "followers": 2
+          }
+        },
+        "americahousedc": {
+          "tiktok": {
+            "views": 4516,
+            "likes": 910,
+            "followers": 113
+          }
+        },
+        "brandonconceicaopodcast": {
+          "tiktok": {
+            "views": 32,
+            "likes": 3,
+            "followers": 19
+          }
+        },
+        "brandondebates": {
+          "tiktok": {
+            "views": 0,
+            "likes": 0,
+            "followers": 0
+          }
+        },
+        "claytoncuteri": {
+          "tiktok": {
+            "views": 534,
+            "likes": 12,
+            "followers": 41
+          }
+        },
+        "robnelsonlive": {
+          "tiktok": {
+            "views": 398218,
+            "likes": 180100,
+            "followers": 9498
+          }
+        },
+        "talktometaylor": {
+          "tiktok": {
+            "views": 1084,
+            "likes": 58000,
+            "followers": 1889
+          }
+        },
+        "sydney.thackray": {
+          "tiktok": {
+            "views": 16928,
+            "likes": 829,
+            "followers": 288
+          }
+        },
+        "ganadelrey": {
+          "tiktok": {
+            "views": 1151076,
+            "likes": 3000000,
+            "followers": 13400
+          }
+        },
+        "evolutionarybrandon": {
+          "tiktok": {
+            "views": 19516,
+            "likes": 1165,
+            "followers": 165
+          }
+        },
+        "clayton.financial": {
+          "tiktok": {
+            "views": 45,
+            "likes": 10,
+            "followers": 6
+          }
+        }
+      }
+    }
+  ]
+}
