@@ -218,16 +218,13 @@ function platformLine(platform) {
     });
   }
   const detail = document.createElement('span');
-  if (typeof platform.views === 'number') {
-    detail.textContent = ` ${platform.views.toLocaleString('en-US')}`;
+  const metric = state.sort === 'growth' ? 'views' : state.sort;
+  const value = platform[metric];
+  if (Number.isFinite(value)) {
+    detail.textContent = ` ${value.toLocaleString('en-US')} ${metric}`;
   } else {
-    const missing = document.createElement('span');
-    missing.className = 'av-missing';
-    const parts = [];
-    if (typeof platform.followers === 'number') parts.push(`${platform.followers.toLocaleString('en-US')} followers`);
-    if (typeof platform.posts === 'number') parts.push(`${fmt(platform.posts)} posts`);
-    missing.textContent = parts.length ? ` ${parts.join(' · ')}` : ' · Awaiting data';
-    detail.append(missing);
+    detail.className = 'av-missing';
+    detail.textContent = ` · ${metric} unavailable`;
   }
   item.append(detail);
   return item;
