@@ -240,7 +240,7 @@ tr.is-top td:first-child { box-shadow: inset 2px 0 0 var(--red); }
 .av-empty { text-align: left; color: var(--muted); font-style: italic; }
 .av-footnote { margin-top: 14px; color: var(--muted); font-size: 12px; line-height: 1.6; }
 .av-footnote a, .av-method-body a { color: var(--gold); }
-.av-jump { text-align: center; }
+.av-jump { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 22px; text-align: center; }
 
 .av-noscript { max-width: 720px; margin: 24px auto; color: var(--cream); }
 

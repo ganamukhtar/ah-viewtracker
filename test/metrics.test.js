@@ -1,7 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { num, sumNumbers } from '../lib/num.js';
-import { mergePlatform } from '../lib/platforms.js';
+import { mergePlatform, platformUrl, samePlatformHandle, sumObservations } from '../lib/platforms.js';
+import { rankAccounts } from '../lib/aggregate.js';
+import { parseFacebookCounts } from '../collector/facebook.js';
+import { instagramFromProfile } from '../collector/public.js';
 import { aggregate, DEFAULT_FILTER, growthFor, toggleSelection } from '../lib/aggregate.js';
 import { chooseRate, estimateAt, measuredRate } from '../lib/project.js';
 import { createLiveCounter, introDisplay, INTRO_MS } from '../lib/live.js';
@@ -202,6 +205,67 @@ test('tiktok public parse keeps profile likes and marks a short embed partial', 
   assert.equal(combined.views, 300);
   assert.equal(combined.viewsComplete, false);
   assert.equal(combined.comments, null);
+});
+
+test('ranks use the summed metric for the selected platforms', () => {
+  const rows = [
+    { id: 'americaclipping', name: 'America Clipping', views: 124, followers: 41, likes: 3 },
+    { id: 'americahousedc', name: 'America House DC', views: 66863, followers: 537, likes: 911 },
+    { id: 'ganadelrey', name: 'Gana Mukhtar', views: 26149113, followers: 13400, likes: 3000000 },
+    { id: 'brandon', name: 'Brandon Conceicao', views: 942643, followers: 297000, likes: 109900 },
+  ];
+  assert.deepEqual(rankAccounts(rows, 'followers').map((row) => row.id), ['brandon', 'ganadelrey', 'americahousedc', 'americaclipping']);
+  assert.notEqual(rankAccounts(rows, 'followers')[0].id, 'ganadelrey');
+  assert.equal(rankAccounts(rows, 'views')[0].id, 'ganadelrey');
+  const instagramOnly = [
+    { id: 'ganadelrey', name: 'Gana Mukhtar', views: null, followers: null, likes: null },
+    { id: 'brandon', name: 'Brandon Conceicao', views: null, followers: 297000, likes: null },
+    { id: 'americaclipping', name: 'America Clipping', views: null, followers: 41, likes: null },
+    { id: 'americahousedc', name: 'America House DC', views: null, followers: 537, likes: null },
+  ];
+  const followers = rankAccounts(instagramOnly, 'followers').map((row) => row.id);
+  assert.deepEqual(followers, ['brandon', 'americahousedc', 'americaclipping', 'ganadelrey']);
+  const summed = sumObservations([
+    { ok: true, views: 1000, followers: 10, viewsComplete: true, viewsCounted: 2 },
+    { ok: true, views: 250, followers: 4, viewsComplete: true, viewsCounted: 1 },
+  ]);
+  assert.equal(summed.views, 1250);
+  assert.equal(summed.followers, 14);
+  assert.equal(summed.viewsComplete, true);
+});
+
+test('instagram followers stay out of the view total', () => {
+  const result = instagramFromProfile({
+    username: 'prophetmode',
+    edge_followed_by: { count: 1102431 },
+    edge_owner_to_timeline_media: {
+      count: 80,
+      edges: [
+        { node: { video_play_count: 1200, edge_liked_by: { count: 40 }, edge_media_to_comment: { count: 3 } } },
+        { node: { edge_liked_by: { count: 10 }, edge_media_to_comment: { count: 1 } } },
+      ],
+    },
+  });
+  assert.equal(result.followers, 1102431);
+  assert.equal(result.views, 1200);
+  assert.equal(result.likes, 50);
+  assert.equal(result.comments, 4);
+  assert.equal(result.viewsComplete, false);
+  assert.notEqual(result.views, result.followers);
+});
+
+test('facebook public text keeps follower counts and ignores a page with none', () => {
+  const html = '<meta property="og:description" content="Clayton Cuteri. 465,671 followers &#xb7; 19,824 talking about this." />';
+  assert.equal(parseFacebookCounts(html).followers, 465671);
+  assert.equal(parseFacebookCounts(html).likes, null);
+  const likesOnly = '<meta property="og:description" content="Example Page. 1,200 likes." />';
+  assert.equal(parseFacebookCounts(likesOnly).likes, 1200);
+  assert.equal(parseFacebookCounts(likesOnly).followers, null);
+  assert.deepEqual(parseFacebookCounts('<html>login</html>'), { followers: null, likes: null });
+  assert.equal(platformUrl('facebook', 'clayton.cuteri.2025'), 'https://www.facebook.com/clayton.cuteri.2025');
+  assert.equal(platformUrl('facebook', '61583541975692'), 'https://www.facebook.com/profile.php?id=61583541975692');
+  assert.equal(samePlatformHandle({ handle: 'claytoncuteri' }, 'claytoncuterii'), false);
+  assert.equal(samePlatformHandle({ handle: '@Sydney.Thackray' }, 'sydney.thackray'), true);
 });
 
 test('apify video rows do not invent a lifetime like total from one digg count', () => {

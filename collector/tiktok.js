@@ -258,10 +258,12 @@ export function withFullVideoList(pub, full) {
     views: full.plays,
     comments: full.comments,
     likes: typeof pub.likes === 'number' ? Math.max(pub.likes, full.videoLikes) : full.videoLikes,
-    viewsComplete: listed == null || full.counted >= Math.floor(listed * 0.98),
+    viewsComplete: listed != null && full.counted >= Math.floor(listed * 0.98) && full.counted <= Math.ceil(listed * 1.02),
     viewsCounted: full.counted,
     viewsMethod: 'sum_of_all_public_videos',
-    viewsNote: `Sum of play counts on ${full.counted} public videos.`,
+    viewsNote: listed != null && full.counted < listed
+      ? `Sum of play counts on ${full.counted} of ${listed} public videos. The unread videos are not estimated.`
+      : `Sum of play counts on ${full.counted} unique public videos. Not an estimate.`,
     viewsPerSecond: velocityFromVideos(full.videos) ?? pub.viewsPerSecond ?? null,
   };
 }

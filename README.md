@@ -1,6 +1,6 @@
 # Aggregated views
 
-A standalone America House viewership page. It totals recorded views across the movement’s TikTok, Instagram, YouTube, and X accounts, in the same visual system as the public counter on [america.co/quests](https://america.co/quests): navy field, gold title, green live dot, cream figure.
+A standalone America House viewership page. It totals recorded views across the movement’s TikTok, Instagram, YouTube, X, and Facebook accounts, in the same visual system as the public counter on [america.co/quests](https://america.co/quests): navy field, gold title, green live dot, cream figure.
 
 The page is static HTML and vanilla ES modules, plus a small Node collector, so it can later move into the america.co site at a path like `/views`.
 
@@ -26,7 +26,9 @@ TIKTOK_PUBLIC=1 npm run collect
 
 The home hero is every account on every platform. Category and platform both start on All, so Creators are included and the hero totals cover every account. The gold title stays “The movement’s total viewership.” Under the red view total are followers, likes, and comments for the same accounts. A metric with no reading is left blank.
 
-The view total is a whole number. On load, the red total and the follower, like, and comment tiles count up from zero to the live value with an ease-out over about 2.25 seconds, then the view total steps up once a second as estimated views accumulate. That count-up lands on the live projected value. Reduced motion shows the live total immediately. After the opening count-up, the count never steps down. A higher snapshot eases in. Followers, likes, and comments then show the latest recorded totals for the current filter.
+The view total is a whole number. On the first load in a browser session, the red total and the follower, like, and comment tiles count up from zero to the live value with an ease-out over about 2.25 seconds, then the view total steps up once a second as estimated views accumulate. That count-up lands on the live projected value. Moving between the home page and accounts shows the live value immediately. Reduced motion shows the live total immediately. After the opening count-up, the count never steps down. A higher snapshot eases in. Followers, likes, and comments then show the latest recorded totals for the current filter.
+
+The hero links to [Start your own quest](https://america.co/quests). Platform chips are TikTok, Instagram, YouTube, X, and Facebook.
 
 **See all accounts** opens [/accounts](/accounts), a separate page with a compact total. Category and platform chips are multi-select. All is exclusive: choosing All clears the others, choosing a specific chip clears All, choosing a selected chip again turns it off, and an empty selection falls back to All. The default chips are All and All. Search still matches the name and the handle.
 

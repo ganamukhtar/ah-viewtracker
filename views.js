@@ -1,4 +1,4 @@
-import { DEFAULT_FILTER, aggregate, growthFor, toggleSelection } from '/lib/aggregate.js';
+import { DEFAULT_FILTER, aggregate, growthFor, rankAccounts, toggleSelection } from '/lib/aggregate.js';
 import { chooseRate, measuredRate } from '/lib/project.js';
 import { createLiveCounter, introDisplay, INTRO_MS } from '/lib/live.js';
 import { PLATFORM_LABELS, PLATFORM_ORDER } from '/lib/platforms.js';
@@ -48,6 +48,7 @@ function icon(platform) {
     instagram: 'M8 3.5h8A4.5 4.5 0 0 1 20.5 8v8a4.5 4.5 0 0 1-4.5 4.5H8A4.5 4.5 0 0 1 3.5 16V8A4.5 4.5 0 0 1 8 3.5zm8 2H8A2.5 2.5 0 0 0 5.5 8v8A2.5 2.5 0 0 0 8 18.5h8a2.5 2.5 0 0 0 2.5-2.5V8A2.5 2.5 0 0 0 16 5.5zM12 8.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2zM17.2 6.4a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1z',
     youtube: 'M4 7.2h16a2 2 0 0 1 2 2v5.6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.2a2 2 0 0 1 2-2zm6.2 1.9v5.8l5-2.9z',
     x: 'M4.2 4.5h4.1l3.6 5 3.8-5h3.9l-6 7.7 6.4 7.3h-4.1l-4-5.4-4.2 5.4H3.8l6.4-8.1z',
+    facebook: 'M14.2 3.5H11.6C9.5 3.5 8.4 4.7 8.4 6.8v1.7H6.3v2.8h2.1v9.2h2.9v-9.2h2.4l.4-2.8h-2.8V7.1c0-.8.2-1.2 1.2-1.2h1.7V3.5z',
   };
   path.setAttribute('d', shapes[platform] || shapes.x);
   path.setAttribute('fill', 'currentColor');
@@ -95,10 +96,21 @@ function paintStat(name, value) {
   node.classList.remove('is-missing');
 }
 
+function introSeen() {
+  try { return sessionStorage.getItem('av-intro-played') === '1'; }
+  catch { return false; }
+}
+
+function markIntroSeen() {
+  try { sessionStorage.setItem('av-intro-played', '1'); }
+  catch { /* private mode */ }
+}
+
 function beginIntro(now) {
   if (intro.startedAt) return;
   intro.startedAt = now;
-  intro.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  intro.reduced = introSeen() || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  markIntroSeen();
   if (!intro.reduced) requestAnimationFrame(runIntro);
 }
 
@@ -189,18 +201,33 @@ function growthCell(growth) {
   return span;
 }
 
+function profileLinks(platform) {
+  if (Array.isArray(platform.links) && platform.links.length) return platform.links.filter((item) => item?.url);
+  return platform.url ? [{ handle: platform.handle, url: platform.url }] : [];
+}
+
 function platformLine(platform) {
   const item = document.createElement('li');
-  const link = document.createElement(platform.url ? 'a' : 'span');
-  if (platform.url) {
-    link.href = platform.url;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    link.title = platform.handle ? `@${platform.handle} on ${PLATFORM_LABELS[platform.id] || platform.id}` : '';
+  const links = profileLinks(platform);
+  const label = PLATFORM_LABELS[platform.id] || platform.id;
+  if (!links.length) {
+    const text = document.createElement('span');
+    if (platform.id !== 'x') text.append(icon(platform.id));
+    text.append(label);
+    item.append(text);
+  } else {
+    links.forEach((entry, index) => {
+      if (index) item.append(document.createTextNode(' · '));
+      const link = document.createElement('a');
+      link.href = entry.url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.title = entry.handle ? `@${entry.handle} on ${label}` : label;
+      if (index === 0 && platform.id !== 'x') link.append(icon(platform.id));
+      link.append(index === 0 ? label : `@${entry.handle || 'profile'}`);
+      item.append(link);
+    });
   }
-  if (platform.id !== 'x') link.append(icon(platform.id));
-  link.append(PLATFORM_LABELS[platform.id] || platform.id);
-  item.append(link);
   const detail = document.createElement('span');
   if (typeof platform.views === 'number') {
     detail.textContent = ` ${platform.views.toLocaleString('en-US')}`;
@@ -245,12 +272,12 @@ function detailCard(platform) {
     note.textContent = platform.viewsNote;
     card.append(note);
   }
-  if (platform.url) {
+  for (const entry of profileLinks(platform)) {
     const link = document.createElement('a');
-    link.href = platform.url;
+    link.href = entry.url;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
-    link.textContent = platform.handle ? `@${platform.handle}` : 'Open profile';
+    link.textContent = entry.handle ? `@${entry.handle}` : 'Open profile';
     card.append(link);
   }
   return card;
@@ -263,19 +290,12 @@ function sortedRows() {
     account,
     growth: growthFor(state.snapshot.history, account, 'views', platforms, now),
   }));
-  const dir = state.dir === 'asc' ? 1 : -1;
-  rows.sort((a, b) => {
-    const av = state.sort === 'growth' ? a.growth?.delta : a.account[state.sort];
-    const bv = state.sort === 'growth' ? b.growth?.delta : b.account[state.sort];
-    const aMissing = typeof av !== 'number';
-    const bMissing = typeof bv !== 'number';
-    if (aMissing && bMissing) return a.account.name.localeCompare(b.account.name);
-    if (aMissing) return 1;
-    if (bMissing) return -1;
-    if (av === bv) return a.account.name.localeCompare(b.account.name);
-    return (av - bv) * dir;
-  });
-  return rows;
+  const ranked = rankAccounts(rows.map((row) => ({
+    ...row.account,
+    growth: row.growth,
+  })), state.sort, state.dir);
+  const byId = new Map(rows.map((row) => [row.account.id, row]));
+  return ranked.map((account) => byId.get(account.id));
 }
 
 function accountIdentity(account, rank) {

@@ -11,10 +11,11 @@ export async function fetchText(url, { timeoutMs = 20000, headers = {} } = {}) {
 }
 
 export async function fetchJson(url, options = {}) {
+  const { timeoutMs = 20000, signal, headers, ...rest } = options;
   const response = await fetch(url, {
-    ...options,
-    headers: { accept: 'application/json', ...(options.headers || {}) },
-    signal: options.signal || AbortSignal.timeout(options.timeoutMs || 20000),
+    ...rest,
+    headers: { accept: 'application/json', ...(headers || {}) },
+    signal: signal || AbortSignal.timeout(timeoutMs),
   });
   let body = null;
   const text = await response.text();
