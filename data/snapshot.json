@@ -2166,7 +2166,7 @@
           "recentLikes": null,
           "recentComments": null,
           "recentNote": null,
-          "viewsPerSecond": 0.000024284663480133552,
+          "viewsPerSecond": 2.4284663480133552e-05,
           "observedAt": "2026-11-22T04:10:42.649Z",
           "checkedAt": "2026-11-22T04:10:42.649Z",
           "source": "tiktok-public-profile+ytdlp",
@@ -2512,7 +2512,7 @@
           "recentLikes": null,
           "recentComments": null,
           "recentNote": null,
-          "viewsPerSecond": 0.00003301510993931551,
+          "viewsPerSecond": 3.301510993931551e-05,
           "observedAt": "2026-11-22T04:10:42.649Z",
           "checkedAt": "2026-11-22T04:10:42.649Z",
           "source": "tiktok-public-profile+ytdlp",
@@ -2616,7 +2616,7 @@
       "handle": "ganadelrey",
       "name": "Gana Mukhtar",
       "category": "creators",
-      "notes": "Instagram is @ganamukh. @ganadelrey on Instagram is someone else. YouTube @gan is a different channel named GaN and is not configured.",
+      "notes": "Instagram is @ganamuk. @ganadelrey on Instagram is someone else, and @ganamukh is not her account. YouTube @gan is a different channel named GaN and is not configured.",
       "platforms": {
         "tiktok": {
           "handle": "ganadelrey",
@@ -2647,13 +2647,13 @@
           ]
         },
         "instagram": {
-          "handle": "ganamukh",
-          "url": "https://www.instagram.com/ganamukh/",
-          "status": "stale",
+          "handle": "ganamuk",
+          "url": "https://www.instagram.com/ganamuk/",
+          "status": "unavailable",
           "views": null,
           "likes": null,
           "comments": null,
-          "followers": 4,
+          "followers": null,
           "viewsComplete": null,
           "viewsCounted": null,
           "viewsListed": null,
@@ -2663,15 +2663,15 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T04:05:41.571Z",
+          "observedAt": null,
           "checkedAt": "2026-11-22T04:10:42.649Z",
-          "source": "instagram-public-profile",
+          "source": null,
           "error": "Instagram profile did not include public counts",
-          "posts": 0,
+          "posts": null,
           "links": [
             {
-              "handle": "ganamukh",
-              "url": "https://www.instagram.com/ganamukh/"
+              "handle": "ganamuk",
+              "url": "https://www.instagram.com/ganamuk/"
             }
           ]
         }

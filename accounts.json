@@ -478,10 +478,10 @@
       "handle": "ganadelrey",
       "name": "Gana Mukhtar",
       "category": "creators",
-      "notes": "Instagram is @ganamukh. @ganadelrey on Instagram is someone else. YouTube @gan is a different channel named GaN and is not configured.",
+      "notes": "Instagram is @ganamuk. @ganadelrey on Instagram is someone else, and @ganamukh is not her account. YouTube @gan is a different channel named GaN and is not configured.",
       "platforms": {
         "tiktok": { "handle": "ganadelrey" },
-        "instagram": { "handle": "ganamukh" }
+        "instagram": { "handle": "ganamuk" }
       }
     },
     {
