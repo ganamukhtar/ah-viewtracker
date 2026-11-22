@@ -286,7 +286,7 @@ function detailCard(platform) {
 function sortedRows() {
   const now = Date.parse(state.snapshot.checkedAt);
   const platforms = state.platforms.includes('all') ? 'all' : state.platforms;
-  const rows = view.accounts.map((account) => ({
+  const rows = totals.accounts.map((account) => ({
     account,
     growth: growthFor(state.snapshot.history, account, 'views', platforms, now),
   }));
@@ -295,7 +295,14 @@ function sortedRows() {
     growth: row.growth,
   })), state.sort, state.dir);
   const byId = new Map(rows.map((row) => [row.account.id, row]));
-  return ranked.map((account) => byId.get(account.id));
+  const visible = new Set(view.accounts.map(account => account.id));
+  let previous, rank;
+  return ranked.map((account, index) => {
+    const value = state.sort === 'growth' ? account.growth?.delta : account[state.sort];
+    if (value !== previous || index === 0) rank = index + 1;
+    previous = value;
+    return { ...byId.get(account.id), rank: Number.isFinite(value) ? rank : null };
+  }).filter(row => visible.has(row.account.id));
 }
 
 function accountIdentity(account, rank) {
@@ -325,7 +332,7 @@ function accountIdentity(account, rank) {
   }
   const badge = document.createElement('span');
   badge.className = 'av-rank';
-  badge.textContent = String(rank);
+  badge.textContent = rank == null ? '—' : String(rank);
   wrap.append(badge, name, meta, plats);
   return wrap;
 }
@@ -373,9 +380,8 @@ function renderBoard() {
     body.append(tr);
     return;
   }
-  rows.forEach(({ account, growth }, index) => {
-    const rank = index + 1;
-    const top = rank <= 3;
+  rows.forEach(({ account, growth, rank }) => {
+    const top = rank != null && rank <= 3;
     const card = document.createElement('article');
     card.className = top ? 'av-card is-top' : 'av-card';
     card.append(accountIdentity(account, rank));
