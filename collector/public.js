@@ -210,7 +210,6 @@ export async function collectInstagramPublic(handle) {
     }).catch((error) => ({ ok: false, status: 0, body: { message: error.message } }));
     const user = info.body?.data?.user;
     if (info.status === 404 || user === null) return { ok: false, error: 'Instagram profile not found' };
-    if (info.status === 429) return { ok: false, error: 'Instagram HTTP 429' };
     if (info.ok && user?.username && String(user.username).toLowerCase() === name.toLowerCase()) {
       let edges = user.edge_owner_to_timeline_media?.edges || [];
       let page = user.edge_owner_to_timeline_media?.page_info;
@@ -227,9 +226,9 @@ export async function collectInstagramPublic(handle) {
       }
       return result;
     }
-    lastError = info.body?.message || `Instagram HTTP ${info.status || 'error'}`;
+    lastError = info.status === 429 ? 'Instagram HTTP 429' : (info.body?.message || `Instagram HTTP ${info.status || 'error'}`);
     let res;
-    try { res = await fetchText(`https://www.instagram.com/${encodeURIComponent(name)}/`, { headers: { 'user-agent': attempt % 2 ? BROWSER_UA : CRAWLER_UA } }); }
+    try { res = await fetchText(`https://www.instagram.com/${encodeURIComponent(name)}/`, { headers: { 'user-agent': 'ah-viewtracker/1.0' } }); }
     catch (error) { lastError = `Instagram request failed (${error.message})`; continue; }
     if (res.status === 404) return { ok: false, error: 'Instagram profile not found' };
     if (!res.ok) { lastError = `Instagram HTTP ${res.status}`; continue; }
