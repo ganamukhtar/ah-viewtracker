@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-22T05:36:50.393Z",
-  "snapshotUpdatedAt": "2026-11-22T05:36:50.393Z",
+  "checkedAt": "2026-11-22T06:36:35.691Z",
+  "snapshotUpdatedAt": "2026-11-22T06:36:35.691Z",
   "feedMode": "published",
   "meaning": "Recorded views, likes, comments, and followers. Not unique people. A missing or unconnected platform is left out of every total and is never stored as zero. Partial view counts are real sums of the public posts that were readable, not lifetime totals. The live estimate, when shown, adds the measured growth rate to the last recorded total and is not itself an observation.",
   "collectors": {
@@ -87,12 +87,12 @@
   "projection": {
     "version": 1,
     "cohort": "all accounts, all platforms",
-    "recorded": 68654366,
-    "perSecond": 5.389873521345831,
-    "anchorAt": "2026-11-22T05:36:50.393Z",
+    "recorded": 68674337,
+    "perSecond": 5.570248275038784,
+    "anchorAt": "2026-11-22T06:36:35.691Z",
     "basis": "Latest recorded view total minus the prior snapshot, divided by elapsed seconds.",
-    "basisStart": "2026-11-22T04:35:45.743Z",
-    "basisEnd": "2026-11-22T05:36:50.393Z"
+    "basisStart": "2026-11-22T05:36:50.393Z",
+    "basisEnd": "2026-11-22T06:36:35.691Z"
   },
   "accounts": [
     {
@@ -106,7 +106,7 @@
           "handle": "questforworldpeace",
           "url": "https://www.tiktok.com/@questforworldpeace",
           "status": "available",
-          "views": 6375,
+          "views": 6376,
           "likes": 481,
           "comments": 36,
           "followers": 91,
@@ -118,9 +118,9 @@
           "recentLikes": null,
           "recentComments": null,
           "recentNote": null,
-          "viewsPerSecond": 0.008497551767827908,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "viewsPerSecond": 0.008444907531305959,
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "tiktok-public-profile+ytdlp",
           "error": null,
           "links": [
@@ -148,7 +148,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 11,
@@ -176,8 +176,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "youtube-public-page",
           "error": null,
           "links": [
@@ -214,7 +214,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 0,
@@ -252,7 +252,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 6,
@@ -290,7 +290,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 8,
@@ -328,7 +328,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 1,
@@ -366,7 +366,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 3,
@@ -404,7 +404,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 0,
@@ -442,7 +442,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 0,
@@ -480,7 +480,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 1,
@@ -518,7 +518,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": null,
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": null,
           "error": "Instagram profile did not include public counts",
           "links": [
@@ -555,7 +555,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 0,
@@ -593,7 +593,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 4,
@@ -631,7 +631,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 4,
@@ -669,7 +669,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 4,
@@ -707,7 +707,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 4,
@@ -745,7 +745,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 15,
@@ -783,7 +783,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 3,
@@ -821,7 +821,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": null,
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": null,
           "error": "Instagram profile did not include public counts",
           "links": [
@@ -858,7 +858,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": null,
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": null,
           "error": "Instagram profile did not include public counts",
           "links": [
@@ -893,9 +893,9 @@
           "recentLikes": null,
           "recentComments": null,
           "recentNote": null,
-          "viewsPerSecond": 0.00015065335944351702,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "viewsPerSecond": 0.0001497623767512861,
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "tiktok-public-profile+ytdlp",
           "error": null,
           "links": [
@@ -923,7 +923,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 38,
@@ -961,7 +961,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": null,
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": null,
           "error": "Instagram profile did not include public counts",
           "links": [
@@ -998,7 +998,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": null,
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": null,
           "error": "Instagram profile did not include public counts",
           "links": [
@@ -1035,7 +1035,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": null,
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": null,
           "error": "Instagram profile did not include public counts",
           "links": [
@@ -1058,8 +1058,8 @@
           "handle": "clayton.financial6",
           "url": "https://www.tiktok.com/@clayton.financial6",
           "status": "partial",
-          "views": 448,
-          "likes": 45,
+          "views": 450,
+          "likes": 46,
           "comments": 9,
           "followers": 15,
           "viewsComplete": false,
@@ -1070,9 +1070,9 @@
           "recentLikes": null,
           "recentComments": null,
           "recentNote": null,
-          "viewsPerSecond": 0.0015985330093831835,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "viewsPerSecond": 0.0015837515811786761,
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "tiktok-public-profile+ytdlp",
           "error": null,
           "links": [
@@ -1100,7 +1100,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 10,
@@ -1138,7 +1138,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": null,
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": null,
           "error": "Instagram profile did not include public counts",
           "links": [
@@ -1175,7 +1175,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 7,
@@ -1213,7 +1213,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 2,
@@ -1251,7 +1251,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 3,
@@ -1287,9 +1287,9 @@
           "recentLikes": null,
           "recentComments": null,
           "recentNote": null,
-          "viewsPerSecond": 0.00034651888455962296,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "viewsPerSecond": 0.0003430703552333337,
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "tiktok-public-profile+ytdlp",
           "error": null,
           "links": [
@@ -1317,7 +1317,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 14,
@@ -1345,8 +1345,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "youtube-public-page",
           "error": null,
           "links": [
@@ -1373,8 +1373,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "x-public-profile",
           "error": null,
           "links": [
@@ -1397,8 +1397,8 @@
           "handle": "americahousedc",
           "url": "https://www.tiktok.com/@americahousedc",
           "status": "available",
-          "views": 16937,
-          "likes": 911,
+          "views": 16942,
+          "likes": 913,
           "comments": 72,
           "followers": 113,
           "viewsComplete": true,
@@ -1409,9 +1409,9 @@
           "recentLikes": null,
           "recentComments": null,
           "recentNote": null,
-          "viewsPerSecond": 0.01390423144918518,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "viewsPerSecond": 0.013778906230042343,
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "tiktok-public-profile+ytdlp",
           "error": null,
           "links": [
@@ -1439,7 +1439,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 43,
@@ -1467,8 +1467,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "youtube-public-page",
           "error": null,
           "links": [
@@ -1495,8 +1495,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "x-public-profile",
           "error": null,
           "links": [
@@ -1532,8 +1532,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "tiktok-public-profile",
           "error": null,
           "links": [
@@ -1561,7 +1561,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 12,
@@ -1599,7 +1599,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": null,
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": null,
           "error": "Instagram profile did not include public counts",
           "links": [
@@ -1636,7 +1636,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": null,
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": null,
           "error": "Instagram profile did not include public counts",
           "links": [
@@ -1673,7 +1673,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": null,
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": null,
           "error": "Instagram profile did not include public counts",
           "links": [
@@ -1710,7 +1710,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": null,
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": null,
           "error": "Instagram profile did not include public counts",
           "links": [
@@ -1747,7 +1747,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": null,
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": null,
           "error": "Instagram profile did not include public counts",
           "links": [
@@ -1784,7 +1784,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": null,
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": null,
           "error": "Instagram profile did not include public counts",
           "links": [
@@ -1820,8 +1820,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "tiktok-public-profile",
           "error": null,
           "links": [
@@ -1857,8 +1857,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "tiktok-public-profile",
           "error": null,
           "links": [
@@ -1886,7 +1886,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 34,
@@ -1914,8 +1914,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "facebook-public-page",
           "error": null,
           "links": [
@@ -1938,7 +1938,7 @@
           "handle": "masteryourmind963",
           "url": "https://www.tiktok.com/@masteryourmind963",
           "status": "available",
-          "views": 943351,
+          "views": 943497,
           "likes": 110000,
           "comments": 3979,
           "followers": 11200,
@@ -1950,9 +1950,9 @@
           "recentLikes": null,
           "recentComments": null,
           "recentNote": null,
-          "viewsPerSecond": 0.19518685549888962,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "viewsPerSecond": 0.19476307278228297,
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "tiktok-public-profile+ytdlp",
           "error": null,
           "links": [
@@ -1980,7 +1980,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 369,
@@ -1995,7 +1995,7 @@
           "handle": "BrandonLConceicao",
           "url": "https://www.youtube.com/@BrandonLConceicao",
           "status": "available",
-          "views": 2197656,
+          "views": 2216281,
           "likes": null,
           "comments": null,
           "followers": 17100,
@@ -2008,8 +2008,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "youtube-public-page",
           "error": null,
           "links": [
@@ -2026,7 +2026,7 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "followers": 389571,
+          "followers": 389620,
           "viewsComplete": null,
           "viewsCounted": null,
           "viewsListed": null,
@@ -2036,8 +2036,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "facebook-public-page",
           "error": null,
           "links": [
@@ -2060,7 +2060,7 @@
           "handle": "portiarasoleil",
           "url": "https://www.tiktok.com/@portiarasoleil",
           "status": "partial",
-          "views": 1961792,
+          "views": 1961796,
           "likes": 156600,
           "comments": 15139,
           "followers": 11900,
@@ -2072,9 +2072,9 @@
           "recentLikes": null,
           "recentComments": null,
           "recentNote": null,
-          "viewsPerSecond": 0.0006566577919084477,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "viewsPerSecond": 0.0006541469157260543,
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "tiktok-public-profile+ytdlp",
           "error": null,
           "links": [
@@ -2102,7 +2102,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 308,
@@ -2131,7 +2131,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": null,
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": null,
           "error": "Facebook page had no public follower or like count",
           "links": [
@@ -2166,9 +2166,9 @@
           "recentLikes": null,
           "recentComments": null,
           "recentNote": null,
-          "viewsPerSecond": 0.00002428221372054592,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "viewsPerSecond": 0.00002428048660197001,
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "tiktok-public-profile+ytdlp",
           "error": null,
           "links": [
@@ -2196,7 +2196,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 1063,
@@ -2224,8 +2224,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "youtube-public-page",
           "error": null,
           "links": [
@@ -2256,8 +2256,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "x-public-profile",
           "error": null,
           "links": [
@@ -2274,7 +2274,7 @@
           "views": null,
           "likes": null,
           "comments": null,
-          "followers": 826190,
+          "followers": 826334,
           "viewsComplete": null,
           "viewsCounted": null,
           "viewsListed": null,
@@ -2284,8 +2284,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "facebook-public-page",
           "error": null,
           "links": [
@@ -2326,7 +2326,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T04:05:41.569Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 0,
@@ -2341,7 +2341,7 @@
           "handle": "JackJay",
           "url": "https://www.youtube.com/@JackJay",
           "status": "available",
-          "views": 503886,
+          "views": 503894,
           "likes": null,
           "comments": null,
           "followers": 892,
@@ -2354,8 +2354,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "youtube-public-page",
           "error": null,
           "links": [
@@ -2382,8 +2382,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "x-public-profile",
           "error": null,
           "links": [
@@ -2418,9 +2418,9 @@
           "recentLikes": null,
           "recentComments": null,
           "recentNote": null,
-          "viewsPerSecond": 0.001470093841156512,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "viewsPerSecond": 0.0014540591359402633,
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "tiktok-public-profile+ytdlp",
           "error": null,
           "links": [
@@ -2448,7 +2448,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 889,
@@ -2476,8 +2476,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "youtube-public-page",
           "error": null,
           "links": [
@@ -2512,9 +2512,9 @@
           "recentLikes": null,
           "recentComments": null,
           "recentNote": null,
-          "viewsPerSecond": 0.00003301425831212006,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "viewsPerSecond": 0.00003301365864632324,
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "tiktok-public-profile+ytdlp",
           "error": null,
           "links": [
@@ -2542,7 +2542,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 119,
@@ -2570,8 +2570,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "youtube-public-page",
           "error": null,
           "links": [
@@ -2598,8 +2598,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "x-public-profile",
           "error": null,
           "links": [
@@ -2622,7 +2622,7 @@
           "handle": "ganadelrey",
           "url": "https://www.tiktok.com/@ganadelrey",
           "status": "partial",
-          "views": 40669694,
+          "views": 40670867,
           "likes": 3000000,
           "comments": 35665,
           "followers": 13400,
@@ -2634,9 +2634,9 @@
           "recentLikes": null,
           "recentComments": null,
           "recentNote": null,
-          "viewsPerSecond": 0.2555099629161101,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "viewsPerSecond": 0.2526905862036258,
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "tiktok-public-profile+ytdlp",
           "error": null,
           "links": [
@@ -2664,7 +2664,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": null,
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": null,
           "error": "Instagram profile did not include public counts",
           "posts": null,
@@ -2702,7 +2702,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": null,
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": null,
           "error": "Instagram profile did not include public counts",
           "links": [
@@ -2725,8 +2725,8 @@
           "handle": "evolutionarybrandon",
           "url": "https://www.tiktok.com/@evolutionarybrandon",
           "status": "available",
-          "views": 19563,
-          "likes": 1177,
+          "views": 19570,
+          "likes": 1178,
           "comments": 153,
           "followers": 166,
           "viewsComplete": true,
@@ -2737,9 +2737,9 @@
           "recentLikes": null,
           "recentComments": null,
           "recentNote": null,
-          "viewsPerSecond": 0.021162452372706555,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "viewsPerSecond": 0.021085033489240606,
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "tiktok-public-profile+ytdlp",
           "error": null,
           "links": [
@@ -2767,7 +2767,7 @@
           "recentNote": null,
           "viewsPerSecond": null,
           "observedAt": "2026-11-22T03:43:04.149Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "instagram-public-profile",
           "error": "Instagram profile did not include public counts",
           "posts": 28,
@@ -2795,8 +2795,8 @@
           "recentComments": null,
           "recentNote": null,
           "viewsPerSecond": null,
-          "observedAt": "2026-11-22T05:36:50.393Z",
-          "checkedAt": "2026-11-22T05:36:50.393Z",
+          "observedAt": "2026-11-22T06:36:35.691Z",
+          "checkedAt": "2026-11-22T06:36:35.691Z",
           "source": "youtube-public-page",
           "error": null,
           "links": [
@@ -4599,6 +4599,319 @@
           "tiktok": {
             "views": 19563,
             "likes": 1177,
+            "comments": 153,
+            "followers": 166
+          },
+          "instagram": {
+            "followers": 178
+          },
+          "youtube": {
+            "views": 117,
+            "followers": 3
+          }
+        }
+      }
+    },
+    {
+      "checkedAt": "2026-11-22T06:36:35.691Z",
+      "accounts": {
+        "questforworldpeace": {
+          "tiktok": {
+            "views": 6376,
+            "likes": 481,
+            "comments": 36,
+            "followers": 91
+          },
+          "instagram": {
+            "followers": 186
+          },
+          "youtube": {
+            "views": 27
+          }
+        },
+        "questforthepeople": {
+          "instagram": {
+            "followers": 30
+          }
+        },
+        "questforpresident": {
+          "instagram": {
+            "followers": 698
+          }
+        },
+        "questforwhitehouse": {
+          "instagram": {
+            "followers": 71
+          }
+        },
+        "questforquest": {
+          "instagram": {
+            "followers": 31
+          }
+        },
+        "questfordebagle": {
+          "instagram": {
+            "followers": 30
+          }
+        },
+        "meetfulquest": {
+          "instagram": {
+            "followers": 7
+          }
+        },
+        "coherencequests": {
+          "instagram": {
+            "followers": 9
+          }
+        },
+        "earthsquests": {
+          "instagram": {
+            "followers": 17
+          }
+        },
+        "cocreatorquest": {
+          "instagram": {
+            "followers": 10
+          }
+        },
+        "placeboquest": {
+          "instagram": {
+            "followers": 12
+          }
+        },
+        "arcadefunquest": {
+          "instagram": {
+            "followers": 16
+          }
+        },
+        "arcadefunquests": {
+          "instagram": {
+            "followers": 8
+          }
+        },
+        "uapquest": {
+          "instagram": {
+            "followers": 21
+          }
+        },
+        "buildnewamerica": {
+          "instagram": {
+            "followers": 143
+          }
+        },
+        "americavlogged": {
+          "instagram": {
+            "followers": 2
+          }
+        },
+        "brandonconceicaopodcast": {
+          "tiktok": {
+            "views": 113,
+            "likes": 3,
+            "comments": 0,
+            "followers": 19
+          },
+          "instagram": {
+            "followers": 106
+          }
+        },
+        "clayton.financial": {
+          "tiktok": {
+            "views": 450,
+            "likes": 46,
+            "comments": 9,
+            "followers": 15
+          },
+          "instagram": {
+            "followers": 3361
+          }
+        },
+        "americahousenews": {
+          "instagram": {
+            "followers": 7
+          }
+        },
+        "lightmirrornews": {
+          "instagram": {
+            "followers": 11
+          }
+        },
+        "fakefornownews": {
+          "instagram": {
+            "followers": 12
+          }
+        },
+        "americaclipping": {
+          "tiktok": {
+            "views": 124,
+            "likes": 3,
+            "comments": 1,
+            "followers": 2
+          },
+          "instagram": {
+            "followers": 41
+          },
+          "youtube": {
+            "views": 2
+          },
+          "x": {
+            "followers": 2
+          }
+        },
+        "americahousedc": {
+          "tiktok": {
+            "views": 16942,
+            "likes": 913,
+            "comments": 72,
+            "followers": 113
+          },
+          "instagram": {
+            "followers": 537
+          },
+          "youtube": {
+            "views": 49944,
+            "followers": 44
+          },
+          "x": {
+            "followers": 3
+          }
+        },
+        "brandondebates": {
+          "tiktok": {
+            "views": 0,
+            "likes": 0,
+            "followers": 0
+          },
+          "instagram": {
+            "followers": 52
+          }
+        },
+        "illuminati": {
+          "tiktok": {
+            "views": 0,
+            "likes": 0,
+            "followers": 1140
+          }
+        },
+        "sydney.thackray": {
+          "tiktok": {
+            "likes": 1700000,
+            "followers": 113400
+          },
+          "instagram": {
+            "followers": 28000
+          },
+          "facebook": {
+            "followers": 1047
+          }
+        },
+        "brandon_conceicao": {
+          "tiktok": {
+            "views": 943497,
+            "likes": 110000,
+            "comments": 3979,
+            "followers": 11200
+          },
+          "instagram": {
+            "followers": 297000
+          },
+          "youtube": {
+            "views": 2216281,
+            "followers": 17100
+          },
+          "facebook": {
+            "followers": 389620
+          }
+        },
+        "drserbyn": {
+          "tiktok": {
+            "views": 1961796,
+            "likes": 156600,
+            "comments": 15139,
+            "followers": 11900
+          },
+          "instagram": {
+            "followers": 36000
+          }
+        },
+        "claytoncuteri": {
+          "tiktok": {
+            "views": 8580,
+            "likes": 13600,
+            "comments": 0,
+            "followers": 10600
+          },
+          "instagram": {
+            "followers": 642000
+          },
+          "youtube": {
+            "views": 18261990,
+            "followers": 69800
+          },
+          "x": {
+            "followers": 872
+          },
+          "facebook": {
+            "followers": 826334
+          }
+        },
+        "prophetnode": {
+          "instagram": {
+            "followers": 1000000
+          },
+          "youtube": {
+            "views": 503894,
+            "followers": 892
+          },
+          "x": {
+            "followers": 8
+          }
+        },
+        "talktometaylor": {
+          "tiktok": {
+            "views": 931366,
+            "likes": 58000,
+            "comments": 2164,
+            "followers": 1889
+          },
+          "instagram": {
+            "followers": 15000
+          },
+          "youtube": {
+            "views": 1181341,
+            "followers": 3590
+          }
+        },
+        "robnelsonlive": {
+          "tiktok": {
+            "views": 1872672,
+            "likes": 180100,
+            "comments": 496,
+            "followers": 9498
+          },
+          "instagram": {
+            "followers": 3597
+          },
+          "youtube": {
+            "views": 28388,
+            "followers": 1450
+          },
+          "x": {
+            "followers": 3183
+          }
+        },
+        "ganadelrey": {
+          "tiktok": {
+            "views": 40670867,
+            "likes": 3000000,
+            "comments": 35665,
+            "followers": 13400
+          }
+        },
+        "evolutionarybrandon": {
+          "tiktok": {
+            "views": 19570,
+            "likes": 1178,
             "comments": 153,
             "followers": 166
           },
