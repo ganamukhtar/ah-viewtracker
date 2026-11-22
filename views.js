@@ -96,21 +96,10 @@ function paintStat(name, value) {
   node.classList.remove('is-missing');
 }
 
-function introSeen() {
-  try { return sessionStorage.getItem('av-intro-played') === '1'; }
-  catch { return false; }
-}
-
-function markIntroSeen() {
-  try { sessionStorage.setItem('av-intro-played', '1'); }
-  catch { /* private mode */ }
-}
-
 function beginIntro(now) {
   if (intro.startedAt) return;
   intro.startedAt = now;
-  intro.reduced = introSeen() || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  markIntroSeen();
+  intro.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!intro.reduced) requestAnimationFrame(runIntro);
 }
 
