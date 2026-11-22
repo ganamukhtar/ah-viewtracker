@@ -1,0 +1,16 @@
+{
+  "name": "america-house-views",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "collect": "node collector/run.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.0.0"
+  }
+}

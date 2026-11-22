@@ -1,0 +1,309 @@
+{
+  "categories": {
+    "quests": "Quests",
+    "fan": "Fan & news pages",
+    "creators": "Creators"
+  },
+  "platforms": ["tiktok", "instagram", "youtube", "x"],
+  "accounts": [
+    {
+      "id": "questforworldpeace",
+      "handle": "questforworldpeace",
+      "name": "Quest for World Peace",
+      "category": "quests",
+      "platforms": {
+        "youtube": { "handle": "questforworldpeace" },
+        "tiktok": { "handle": "questforworldpeace" },
+        "instagram": { "handle": "questforworldpeace" }
+      }
+    },
+    {
+      "id": "questforthepeople",
+      "handle": "questforthepeople",
+      "name": "Quest for the People",
+      "category": "quests",
+      "platforms": {}
+    },
+    {
+      "id": "questforpresident",
+      "handle": "questforpresident",
+      "name": "Quest for President",
+      "category": "quests",
+      "platforms": {
+        "instagram": { "handle": "questforpresident" }
+      }
+    },
+    {
+      "id": "questforwhitehouse",
+      "handle": "questforwhitehouse",
+      "name": "Quest for the White House",
+      "category": "quests",
+      "platforms": {
+        "instagram": { "handle": "questforwhitehouse" }
+      }
+    },
+    {
+      "id": "questforquest",
+      "handle": "questforquest",
+      "name": "Quest for Quest",
+      "category": "quests",
+      "notes": "X @questforquest is an unrelated person and is intentionally not configured.",
+      "platforms": {
+        "youtube": { "handle": "questforquest" }
+      }
+    },
+    {
+      "id": "questfordebagle",
+      "handle": "questfordebagle",
+      "name": "Quest for de Bagel",
+      "category": "quests",
+      "platforms": {
+        "instagram": { "handle": "questfordebagle" }
+      }
+    },
+    {
+      "id": "meetfulquest",
+      "handle": "meetfulquest",
+      "name": "Meetful Quest",
+      "category": "quests",
+      "platforms": {}
+    },
+    {
+      "id": "coherencequests",
+      "handle": "coherencequests",
+      "name": "Coherence Quests",
+      "category": "quests",
+      "platforms": {}
+    },
+    {
+      "id": "earthsquests",
+      "handle": "earthsquests",
+      "name": "Earth's Quests",
+      "category": "quests",
+      "platforms": {}
+    },
+    {
+      "id": "tellscreenquests",
+      "handle": "tellscreenquests",
+      "name": "TellScreen Quests",
+      "category": "quests",
+      "platforms": {}
+    },
+    {
+      "id": "cocreatorquest",
+      "handle": "cocreatorquest",
+      "name": "Co-creator Quest",
+      "category": "quests",
+      "platforms": {}
+    },
+    {
+      "id": "placeboquest",
+      "handle": "placeboquest",
+      "name": "Placebo Quest",
+      "category": "quests",
+      "platforms": {}
+    },
+    {
+      "id": "arcadefunquest",
+      "handle": "arcadefunquest",
+      "name": "Arcade Fun Quest",
+      "category": "quests",
+      "platforms": {}
+    },
+    {
+      "id": "arcadefunquests",
+      "handle": "arcadefunquests",
+      "name": "Arcade Fun Quests",
+      "category": "quests",
+      "platforms": {}
+    },
+    {
+      "id": "uapquest",
+      "handle": "uapquest",
+      "name": "UAP Quest",
+      "category": "quests",
+      "platforms": {}
+    },
+    {
+      "id": "americahousenews",
+      "handle": "americahousenews",
+      "name": "America House News",
+      "category": "fan",
+      "platforms": {}
+    },
+    {
+      "id": "lightmirrornews",
+      "handle": "lightmirrornews",
+      "name": "Light Mirror News",
+      "category": "fan",
+      "platforms": {}
+    },
+    {
+      "id": "fakefornownews",
+      "handle": "fakefornownews",
+      "name": "Fake For Now News",
+      "category": "fan",
+      "platforms": {}
+    },
+    {
+      "id": "americavlogged",
+      "handle": "americavlogged",
+      "name": "America Vlogged",
+      "category": "fan",
+      "platforms": {}
+    },
+    {
+      "id": "americaclipping",
+      "handle": "americaclipping",
+      "name": "America Clipping",
+      "category": "fan",
+      "platforms": {
+        "youtube": { "handle": "americaclipping" },
+        "tiktok": { "handle": "americaclipping" },
+        "x": { "handle": "Americaclipping" }
+      }
+    },
+    {
+      "id": "americahousedc",
+      "handle": "americahousedc",
+      "name": "America House DC",
+      "category": "fan",
+      "platforms": {
+        "youtube": { "handle": "americahousedc", "id": "UCqRWmTBXXwvgBWNyZBsDVDw" },
+        "tiktok": { "handle": "americahousedc" },
+        "x": { "handle": "americahousedc" },
+        "instagram": { "handle": "americahousedc" }
+      }
+    },
+    {
+      "id": "buildnewamerica",
+      "handle": "buildnewamerica",
+      "name": "Build New America",
+      "category": "fan",
+      "platforms": {
+        "instagram": { "handle": "buildnewamerica" }
+      }
+    },
+    {
+      "id": "brandonconceicaopodcast",
+      "handle": "brandonconceicaopodcast",
+      "name": "Brandon Conceicao Podcast",
+      "category": "fan",
+      "platforms": {
+        "youtube": { "handle": "brandonconceicaopodcast" },
+        "tiktok": { "handle": "brandonconceicaopodcast" },
+        "instagram": { "handle": "brandonconceicaopodcast" }
+      }
+    },
+    {
+      "id": "brandondebates",
+      "handle": "brandondebates",
+      "name": "Brandon Debates",
+      "category": "fan",
+      "platforms": {
+        "tiktok": { "handle": "brandondebates" },
+        "x": { "handle": "brandondebates" },
+        "instagram": { "handle": "brandondebates" }
+      }
+    },
+    {
+      "id": "claytoncuteri",
+      "handle": "claytoncuteri",
+      "name": "Clayton Cuteri",
+      "category": "creators",
+      "platforms": {
+        "tiktok": { "handle": "claytoncuteri" },
+        "x": { "handle": "ClaytonCuteri" }
+      }
+    },
+    {
+      "id": "brandon_conceicao",
+      "handle": "brandon_conceicao",
+      "name": "Brandon Conceicao",
+      "category": "creators",
+      "platforms": {
+        "instagram": { "handle": "brandon_conceicao" }
+      }
+    },
+    {
+      "id": "drserbyn",
+      "handle": "drserbyn",
+      "name": "Dr. Serbyn",
+      "category": "creators",
+      "platforms": {
+        "x": { "handle": "drserbyn" }
+      }
+    },
+    {
+      "id": "robnelsonlive",
+      "handle": "robnelsonlive",
+      "name": "Rob Nelson",
+      "category": "creators",
+      "platforms": {
+        "youtube": { "handle": "robnelsonlive" },
+        "tiktok": { "handle": "robnelsonlive" },
+        "x": { "handle": "robnelsonlive" }
+      }
+    },
+    {
+      "id": "talktometaylor",
+      "handle": "talktometaylor",
+      "name": "Talk to Me Taylor",
+      "category": "creators",
+      "platforms": {
+        "youtube": { "handle": "talktometaylor" },
+        "tiktok": { "handle": "talktometaylor" }
+      }
+    },
+    {
+      "id": "prophetnode",
+      "handle": "prophetnode",
+      "name": "Prophet Node",
+      "category": "creators",
+      "platforms": {
+        "x": { "handle": "Prophetnode" }
+      }
+    },
+    {
+      "id": "sydney.thackray",
+      "handle": "sydney.thackray",
+      "name": "Sydney Thackray",
+      "category": "creators",
+      "platforms": {
+        "tiktok": { "handle": "sydney.thackray" },
+        "x": { "handle": "SydneyThackray" }
+      }
+    },
+    {
+      "id": "ganadelrey",
+      "handle": "ganadelrey",
+      "name": "Gana Del Rey",
+      "category": "creators",
+      "platforms": {
+        "tiktok": { "handle": "ganadelrey" }
+      }
+    },
+    {
+      "id": "evolutionarybrandon",
+      "handle": "evolutionarybrandon",
+      "name": "Evolutionary Brandon",
+      "category": "creators",
+      "platforms": {
+        "youtube": { "handle": "evolutionarybrandon" },
+        "tiktok": { "handle": "evolutionarybrandon" },
+        "instagram": { "handle": "evolutionarybrandon" }
+      }
+    },
+    {
+      "id": "clayton.financial",
+      "handle": "clayton.financial",
+      "name": "Clayton Financial",
+      "category": "creators",
+      "platforms": {
+        "youtube": { "handle": "clayton.financial" },
+        "tiktok": { "handle": "clayton.financial" },
+        "instagram": { "handle": "clayton.financial" }
+      }
+    }
+  ]
+}

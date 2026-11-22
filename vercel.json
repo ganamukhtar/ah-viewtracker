@@ -1,0 +1,14 @@
+{
+  "framework": null,
+  "cleanUrls": false,
+  "rewrites": [
+    { "source": "/accounts", "destination": "/accounts.html" },
+    { "source": "/accounts/", "destination": "/accounts.html" }
+  ],
+  "crons": [
+    {
+      "path": "/api/collect",
+      "schedule": "0 13 * * *"
+    }
+  ]
+}

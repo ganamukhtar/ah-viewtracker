@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accounts | Aggregated views | America.co</title>
+  <meta name="description" content="Every America House account ranked by recorded views, with TikTok, Instagram, YouTube, and X.">
+  <meta name="theme-color" content="#0a1128">
+  <link rel="icon" href="/favicon.svg">
+  <link rel="stylesheet" href="/styles/fonts.css">
+  <link rel="stylesheet" href="/styles/views.css">
+</head>
+<body data-page="accounts">
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="site-frame" aria-hidden="true"></div>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main">
+      <a class="brand" href="https://america.co/">AMERICA<span>.CO</span></a>
+      <div class="nav-links">
+        <a href="https://america.co/quests">Quests</a>
+        <a href="/">Viewership</a>
+        <a class="nav-cta" href="/accounts" aria-current="page">Accounts</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="movement-pulse" aria-labelledby="accounts-title">
+      <header class="mp-scoreboard is-compact">
+        <p class="eyebrow">America House · Aggregated views</p>
+        <h1 id="accounts-title">All accounts</h1>
+        <p class="mp-total-label is-waiting" data-label>Live view feed</p>
+        <p class="mp-total" data-figure aria-label="Checking the latest reports">
+          <span class="mp-rise" data-rise hidden aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M6 1.5l4.5 6H1.5z" fill="currentColor"/></svg></span>
+          <span class="mp-live-value is-text" data-value>Checking…</span>
+        </p>
+        <div class="av-reach" data-reach>
+          <article><span>Followers</span><strong data-stat="followers">…</strong></article>
+          <article><span>Likes</span><strong data-stat="likes">…</strong></article>
+          <article><span>Comments</span><strong data-stat="comments">…</strong></article>
+        </div>
+        <p class="mp-estimate-note">Across connected accounts</p>
+        <p class="mp-confirmed" data-confirmed aria-live="polite">Checking the latest reports…</p>
+      </header>
+      <div class="av-board">
+        <div class="av-filters">
+          <label class="av-search">
+            <span>Search</span>
+            <input type="search" data-search placeholder="Name or handle" autocomplete="off">
+          </label>
+          <div class="av-filter" role="group" aria-label="Category">
+            <span>Category</span>
+            <div class="av-pills" data-categories></div>
+          </div>
+          <div class="av-filter" role="group" aria-label="Platform">
+            <span>Platform</span>
+            <div class="av-pills" data-platforms></div>
+          </div>
+        </div>
+        <p class="av-summary" data-summary></p>
+        <div class="av-platform-totals" data-platform-totals></div>
+        <label class="av-sort">
+          <span>Rank by</span>
+          <select data-sort-select>
+            <option value="views:desc">Views, high to low</option>
+            <option value="views:asc">Views, low to high</option>
+            <option value="likes:desc">Likes, high to low</option>
+            <option value="likes:asc">Likes, low to high</option>
+            <option value="comments:desc">Comments, high to low</option>
+            <option value="comments:asc">Comments, low to high</option>
+            <option value="followers:desc">Followers, high to low</option>
+            <option value="followers:asc">Followers, low to high</option>
+            <option value="growth:desc">24h change, high to low</option>
+            <option value="growth:asc">24h change, low to high</option>
+          </select>
+        </label>
+        <div class="av-cards" data-cards></div>
+        <div class="av-table-wrap">
+          <table class="av-table">
+            <caption class="sr-only">Accounts ranked by recorded views. Not connected is not zero.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Account</th>
+                <th scope="col" data-sort="views" aria-sort="descending"><button type="button">Views</button></th>
+                <th scope="col" data-sort="likes"><button type="button">Likes</button></th>
+                <th scope="col" data-sort="comments"><button type="button">Comments</button></th>
+                <th scope="col" data-sort="followers"><button type="button">Followers</button></th>
+                <th scope="col" data-sort="growth"><button type="button" title="Change in views since the snapshot closest to 24 hours ago">24h</button></th>
+              </tr>
+            </thead>
+            <tbody data-rows></tbody>
+          </table>
+        </div>
+        <p class="av-footnote">Not connected is left out of the total. Rank follows the column you sort. A partial mark means the public video list was shorter than the profile.</p>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="/views.js"></script>
+</body>
+</html>
