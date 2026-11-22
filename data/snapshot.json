@@ -1413,9 +1413,9 @@
     {
       "id": "prophetnode",
       "handle": "prophetnode",
-      "name": "Prophet Node",
+      "name": "Jack Jay",
       "category": "creators",
-      "notes": "Instagram @prophetnode (Jack Jay) is not confirmed as the same account and is not configured.",
+      "notes": null,
       "platforms": {
         "x": {
           "handle": "Prophetnode",
@@ -1438,6 +1438,29 @@
           "checkedAt": "2026-11-22T03:27:08.373Z",
           "source": "x-public-profile",
           "error": null
+        },
+        "instagram": {
+          "handle": "prophetmode",
+          "url": "https://www.instagram.com/prophetmode/",
+          "status": "available",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": 1000000,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "viewsPerSecond": null,
+          "observedAt": "2026-11-22T04:05:41.569Z",
+          "checkedAt": "2026-11-22T04:05:41.569Z",
+          "source": "instagram-public-profile",
+          "error": null,
+          "posts": 0
         }
       }
     },
@@ -1520,9 +1543,9 @@
     {
       "id": "ganadelrey",
       "handle": "ganadelrey",
-      "name": "Gana Del Rey",
+      "name": "Gana Mukhtar",
       "category": "creators",
-      "notes": "Instagram @ganadelrey belongs to someone else and is not configured.",
+      "notes": "Instagram is @ganamukh. @ganadelrey on Instagram is someone else. YouTube @gan is a different channel named GaN and is not configured.",
       "platforms": {
         "tiktok": {
           "handle": "ganadelrey",
@@ -1545,6 +1568,29 @@
           "checkedAt": "2026-11-22T03:27:08.373Z",
           "source": "tiktok-public-profile+ytdlp",
           "error": null
+        },
+        "instagram": {
+          "handle": "ganamukh",
+          "url": "https://www.instagram.com/ganamukh/",
+          "status": "available",
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "followers": 4,
+          "viewsComplete": null,
+          "viewsCounted": null,
+          "viewsListed": null,
+          "viewsMethod": null,
+          "viewsNote": null,
+          "recentLikes": null,
+          "recentComments": null,
+          "recentNote": null,
+          "viewsPerSecond": null,
+          "observedAt": "2026-11-22T04:05:41.571Z",
+          "checkedAt": "2026-11-22T04:05:41.571Z",
+          "source": "instagram-public-profile",
+          "error": null,
+          "posts": 0
         }
       }
     },
