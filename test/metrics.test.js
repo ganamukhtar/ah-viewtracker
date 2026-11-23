@@ -4,7 +4,7 @@ import { num, sumNumbers } from '../lib/num.js';
 import { mergePlatform, platformUrl, samePlatformHandle, sumObservations } from '../lib/platforms.js';
 import { rankAccounts } from '../lib/aggregate.js';
 import { parseFacebookCounts } from '../collector/facebook.js';
-import { instagramFromProfile } from '../collector/public.js';
+import { instagramFromProfile, instagramEmbedCounts } from '../collector/public.js';
 import { aggregate, DEFAULT_FILTER, growthFor, toggleSelection } from '../lib/aggregate.js';
 import { chooseRate, estimateAt, measuredRate } from '../lib/project.js';
 import { createLiveCounter, introDisplay, INTRO_MS } from '../lib/live.js';
@@ -279,4 +279,15 @@ test('apify video rows do not invent a lifetime like total from one digg count',
   assert.equal(parsed.viewsComplete, false);
   assert.equal(parsed.likes, null);
   assert.equal(parsed.comments, null);
+});
+
+test('Instagram profile previews count distinct posts and only matched reel views', async () => {
+  const embed = body => JSON.stringify({ contextJSON: JSON.stringify(body) });
+  const media = { id: '12', shortcode: 'abc', is_video: true, edge_liked_by: { count: 18 }, edge_media_to_comment: { count: 3 } };
+  const html = embed({ context: { username: 'sample', posts_count: 25, graphql_media: [media, media].map(shortcode_media => ({ shortcode_media })) } });
+  const collect = id => instagramEmbedCounts(html, 'sample', async () => embed({ gql_data: { shortcode_media: { id, video_view_count: 75 } } }));
+  const result = await collect('12');
+  assert.deepEqual([result.views, result.likes, result.comments, result.viewsComplete], [75, 18, 3, false]);
+  assert.equal((await collect('99')).views, null);
+  assert.equal(await instagramEmbedCounts(html, 'someone_else'), null);
 });

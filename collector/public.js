@@ -194,8 +194,43 @@ export function instagramFromProfile(user, edges = user?.edge_owner_to_timeline_
   return result;
 }
 
+function embedPayload(html) {
+  const match = html.match(/"contextJSON"\s*:\s*("(?:\\.|[^"\\])*")/);
+  if (!match) return null;
+  return JSON.parse(JSON.parse(match[1]));
+}
+
+export async function instagramEmbedCounts(html, handle, readPost = async code => (await fetchText(`https://www.instagram.com/reel/${code}/embed/`)).text) {
+  const context = embedPayload(html)?.context;
+  if (context?.username?.toLowerCase() !== handle.toLowerCase()) return null;
+  const media = [...new Map((context.graphql_media || []).map(({ shortcode_media: post }) => [post?.id, post])).values()].filter(post => post?.id);
+  for (const post of media) {
+    if (!post.is_video || !/^[\w-]+$/.test(post.shortcode)) continue;
+    try {
+      const detail = embedPayload(await readPost(post.shortcode))?.gql_data?.shortcode_media;
+      if (detail?.id === post.id) post.video_view_count = detail.video_play_count ?? detail.video_view_count;
+    } catch { /* Keep engagement if the reel is unavailable. */ }
+  }
+  const result = instagramFromProfile({
+    edge_followed_by: { count: context.followers_count },
+    edge_owner_to_timeline_media: { count: context.posts_count },
+  }, media);
+  result.source = 'instagram-profile-embed';
+  result.posts = num(context.posts_count);
+  if (result.posts === 0 && media.length === 0) {
+    Object.assign(result, { views: 0, viewsComplete: true, viewsCounted: 0, likes: 0, comments: 0 });
+  }
+  result.recentNote = `Instagram engagement covers the ${media.length} posts in the public profile preview.`;
+  return result;
+}
+
 export async function collectInstagramPublic(handle) {
   const name = String(handle).replace(/^@/, '');
+  try {
+    const embed = await fetchText(`https://www.instagram.com/${encodeURIComponent(name)}/embed/`);
+    const preview = embed.ok && await instagramEmbedCounts(embed.text, name);
+    if (preview && (preview.views != null || preview.likes != null || preview.posts === 0)) return preview;
+  } catch { /* Try the full profile when the embed is unavailable. */ }
   let lastError = 'Instagram profile was not readable';
   for (let attempt = 0; attempt < 2; attempt += 1) {
     if (attempt) await new Promise((resolve) => setTimeout(resolve, 4000 * attempt));

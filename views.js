@@ -253,9 +253,9 @@ function detailCard(platform) {
     status.textContent = [date && `Last reading · ${date}`, platform.error, platform.views == null && 'View count unavailable'].filter(Boolean).join(' · ');
     card.append(status);
   }
-  if (platform.viewsNote) {
+  if (platform.viewsNote || platform.recentNote) {
     const note = document.createElement('p');
-    note.textContent = platform.viewsNote;
+    note.textContent = [platform.viewsNote, platform.recentNote].filter(Boolean).join(' ');
     card.append(note);
   }
   for (const entry of profileLinks(platform)) {
