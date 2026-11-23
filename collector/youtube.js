@@ -1,3 +1,4 @@
+import { addBrandonLikes } from './youtube-likes.js';
 import { num } from '../lib/num.js';
 import { fetchJson } from './http.js';
 import { collectYouTubePublic } from './public.js';
@@ -13,6 +14,12 @@ export function youtubeApiEnabled(env) {
 export async function collectYouTube(account, env) {
   const spec = account.platforms?.youtube;
   if (!spec?.handle && !spec?.id) return { ok: false, error: 'No YouTube handle configured' };
+  const base = await collectChannel(account, env);
+  return addBrandonLikes(base, spec.handle);
+}
+
+async function collectChannel(account, env) {
+  const spec = account.platforms.youtube;
   if (!env.YOUTUBE_API_KEY) return collectYouTubePublic(spec);
   const key = env.YOUTUBE_API_KEY;
   const params = new URLSearchParams({ part: 'statistics,snippet', key });
