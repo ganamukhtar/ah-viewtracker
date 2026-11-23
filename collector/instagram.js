@@ -69,6 +69,9 @@ export async function collectInstagram(account, env) {
   return {
     ok: true,
     source: 'instagram-graph-business-discovery',
+    postMetrics: Object.fromEntries(media.map(item => [item.id, {
+      views: num(item.view_count), likes: num(item.like_count), comments: num(item.comments_count),
+    }])),
     followers,
     posts: mediaCount,
     likes,

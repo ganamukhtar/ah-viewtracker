@@ -349,6 +349,11 @@ function renderBoard() {
     line.textContent = typeof platformTotal.views === 'number'
       ? `${fmt(platformTotal.views)} views`
       : typeof platformTotal.followers === 'number' ? `${fmt(platformTotal.followers)} followers` : '';
+    if (id === 'instagram') {
+      line.textContent = ['views', 'followers', 'likes'].map(key =>
+        Number.isFinite(platformTotal[key]) ? `${fmt(platformTotal[key])} ${key === 'followers' ? key : 'recorded ' + key}` : `${key} unavailable`
+      ).join(' · ');
+    }
     chip.append(title, line);
     chips.append(chip);
   }

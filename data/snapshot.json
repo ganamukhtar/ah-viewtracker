@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-23T20:10:56.122Z",
-  "snapshotUpdatedAt": "2026-11-23T20:10:56.122Z",
+  "checkedAt": "2026-11-23T20:54:31.673Z",
+  "snapshotUpdatedAt": "2026-11-23T20:54:31.673Z",
   "feedMode": "published",
   "meaning": "Recorded views, likes, comments, and followers. Not unique people. A missing or unconnected platform is left out of every total and is never stored as zero. Partial view counts are real sums of the public posts that were readable, not lifetime totals. The live estimate, when shown, adds the measured growth rate to the last recorded total and is not itself an observation.",
   "collectors": {
@@ -27,55 +27,9 @@
     }
   },
   "warnings": [
-    "questforworldpeace instagram: Instagram HTTP 429",
-    "questforthepeople instagram: Instagram HTTP 429",
-    "questforpresident instagram: Instagram HTTP 429",
-    "questforwhitehouse instagram: Instagram HTTP 429",
-    "questforquest instagram: Instagram HTTP 429",
-    "questfordebagle instagram: Instagram HTTP 429",
-    "meetfulquest instagram: Instagram HTTP 429",
-    "coherencequests instagram: Instagram HTTP 429",
-    "earthsquests instagram: Instagram HTTP 429",
-    "tellscreenquest instagram: Instagram HTTP 429",
-    "cocreatorquest instagram: Instagram HTTP 429",
-    "placeboquest instagram: Instagram HTTP 429",
-    "arcadefunquest instagram: Instagram HTTP 429",
-    "arcadefunquests instagram: Instagram HTTP 429",
-    "uapquest instagram: Instagram HTTP 429",
-    "buildnewamerica instagram: Instagram HTTP 429",
-    "americavlogged instagram: Instagram HTTP 429",
-    "americas.love instagram: Instagram HTTP 429",
-    "america.evolution instagram: Instagram HTTP 429",
-    "brandonconceicaopodcast instagram: Instagram HTTP 429",
-    "debagle.app instagram: Instagram HTTP 429",
-    "extraordinaryroad instagram: Instagram HTTP 429",
-    "thesimplepart instagram: Instagram HTTP 429",
-    "clayton.financial instagram: Instagram HTTP 429",
-    "basedlegos instagram: Instagram HTTP 429",
-    "americahousenews instagram: Instagram HTTP 429",
-    "lightmirrornews instagram: Instagram HTTP 429",
-    "fakefornownews instagram: Instagram HTTP 429",
-    "americaclipping instagram: Instagram HTTP 429",
-    "americahousedc instagram: Instagram HTTP 429",
-    "brandondebates instagram: Instagram HTTP 429",
-    "americanhistoryfacts instagram: Instagram HTTP 429",
-    "govtechvision instagram: Instagram HTTP 429",
-    "crazyusafacts instagram: Instagram HTTP 429",
-    "politicsnthecity instagram: Instagram HTTP 429",
-    "civicaction101 instagram: Instagram HTTP 429",
-    "constitutionexplained instagram: Instagram HTTP 429",
-    "sydney.thackray instagram: Instagram HTTP 429",
-    "brandon_conceicao instagram: Instagram HTTP 429",
-    "drserbyn instagram: Instagram HTTP 429",
     "drserbyn facebook: Facebook page had no public follower or like count",
-    "claytoncuteri instagram: Instagram HTTP 429",
     "claytoncuteri youtube: YouTube channel not found",
-    "prophetnode instagram: Instagram HTTP 429",
-    "talktometaylor instagram: Instagram HTTP 429",
-    "robnelsonlive instagram: Instagram HTTP 429",
-    "ganadelrey instagram: Instagram HTTP 429",
-    "aara instagram: Instagram HTTP 429",
-    "evolutionarybrandon instagram: Instagram HTTP 429"
+    "aara instagram: Instagram HTTP 429"
   ],
   "coverage": {
     "accounts": 48,
@@ -87,7 +41,7 @@
   "projection": {
     "version": 1,
     "cohort": "all accounts, all platforms",
-    "recorded": 69402312,
+    "recorded": 69447399,
     "perSecond": 0.4808013616830305,
     "anchorAt": "2026-11-23T20:10:56.122Z",
     "basis": "Average play rate of recent public videos, used until two snapshots show growth.",
@@ -133,7 +87,7 @@
         "instagram": {
           "handle": "questforworldpeace",
           "url": "https://www.instagram.com/questforworldpeace/",
-          "status": "stale",
+          "status": "partial",
           "views": 5617,
           "likes": 597,
           "comments": 87,
@@ -141,23 +95,55 @@
           "viewsComplete": false,
           "viewsCounted": 6,
           "viewsListed": 12,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 6 of 12 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 6 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 12,
           "links": [
             {
               "handle": "questforworldpeace",
               "url": "https://www.instagram.com/questforworldpeace/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4036106788910018247": {
+              "views": 1097,
+              "likes": 130,
+              "comments": 12
+            },
+            "4033670508401537345": {
+              "views": 1639,
+              "likes": 225,
+              "comments": 42
+            },
+            "4033546750379292379": {
+              "views": 218,
+              "likes": 16,
+              "comments": 2
+            },
+            "4032846274976636202": {
+              "views": 1353,
+              "likes": 100,
+              "comments": 12
+            },
+            "4031289576084409269": {
+              "views": 340,
+              "likes": 28,
+              "comments": 12
+            },
+            "4029809804040979305": {
+              "views": 970,
+              "likes": 98,
+              "comments": 7
+            }
+          }
         },
         "youtube": {
           "handle": "questforworldpeace",
@@ -199,7 +185,7 @@
         "instagram": {
           "handle": "questforthepeople",
           "url": "https://www.instagram.com/questforthepeople/",
-          "status": "stale",
+          "status": "available",
           "views": 1557,
           "likes": 14,
           "comments": 5,
@@ -207,23 +193,30 @@
           "viewsComplete": true,
           "viewsCounted": 1,
           "viewsListed": 1,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 1 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 1 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 1 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 1 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 1,
           "links": [
             {
               "handle": "questforthepeople",
               "url": "https://www.instagram.com/questforthepeople/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035801560435816840": {
+              "views": 1557,
+              "likes": 14,
+              "comments": 5
+            }
+          }
         }
       }
     },
@@ -237,7 +230,7 @@
         "instagram": {
           "handle": "questforpresident",
           "url": "https://www.instagram.com/questforpresident/",
-          "status": "stale",
+          "status": "partial",
           "views": 6042,
           "likes": 82,
           "comments": 13,
@@ -245,23 +238,55 @@
           "viewsComplete": false,
           "viewsCounted": 6,
           "viewsListed": 7,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 6 of 7 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 6 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 7,
           "links": [
             {
               "handle": "questforpresident",
               "url": "https://www.instagram.com/questforpresident/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035801560435816840": {
+              "views": 1557,
+              "likes": 14,
+              "comments": 5
+            },
+            "4035344645839231083": {
+              "views": 127,
+              "likes": 5,
+              "comments": 1
+            },
+            "4029113373801983525": {
+              "views": 1717,
+              "likes": 23,
+              "comments": 2
+            },
+            "4027011410347964226": {
+              "views": 221,
+              "likes": 5,
+              "comments": 0
+            },
+            "4025992522973905292": {
+              "views": 1150,
+              "likes": 15,
+              "comments": 2
+            },
+            "4024902133453991435": {
+              "views": 1270,
+              "likes": 20,
+              "comments": 3
+            }
+          }
         }
       }
     },
@@ -275,7 +300,7 @@
         "instagram": {
           "handle": "questforwhitehouse",
           "url": "https://www.instagram.com/questforwhitehouse/",
-          "status": "stale",
+          "status": "partial",
           "views": 39434,
           "likes": 141,
           "comments": 63,
@@ -283,23 +308,55 @@
           "viewsComplete": false,
           "viewsCounted": 6,
           "viewsListed": 9,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 6 of 9 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 6 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 9,
           "links": [
             {
               "handle": "questforwhitehouse",
               "url": "https://www.instagram.com/questforwhitehouse/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035801560435816840": {
+              "views": 1557,
+              "likes": 14,
+              "comments": 5
+            },
+            "4035338887621926836": {
+              "views": 748,
+              "likes": 2,
+              "comments": 2
+            },
+            "4031301337412531235": {
+              "views": 1436,
+              "likes": 14,
+              "comments": 6
+            },
+            "4029120738043578366": {
+              "views": 2671,
+              "likes": 20,
+              "comments": 14
+            },
+            "4027005777389386658": {
+              "views": 28079,
+              "likes": 76,
+              "comments": 26
+            },
+            "4026429921651198379": {
+              "views": 4943,
+              "likes": 15,
+              "comments": 10
+            }
+          }
         }
       }
     },
@@ -313,7 +370,7 @@
         "instagram": {
           "handle": "questforquest",
           "url": "https://www.instagram.com/questforquest/",
-          "status": "stale",
+          "status": "available",
           "views": 1714,
           "likes": 20,
           "comments": 5,
@@ -321,23 +378,35 @@
           "viewsComplete": true,
           "viewsCounted": 2,
           "viewsListed": 2,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 2 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 2 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 2 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 2 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 2,
           "links": [
             {
               "handle": "questforquest",
               "url": "https://www.instagram.com/questforquest/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035801560435816840": {
+              "views": 1557,
+              "likes": 14,
+              "comments": 5
+            },
+            "4031305377896586684": {
+              "views": 157,
+              "likes": 6,
+              "comments": 0
+            }
+          }
         }
       }
     },
@@ -351,7 +420,7 @@
         "instagram": {
           "handle": "questfordebagle",
           "url": "https://www.instagram.com/questfordebagle/",
-          "status": "stale",
+          "status": "available",
           "views": 1917,
           "likes": 27,
           "comments": 7,
@@ -359,23 +428,45 @@
           "viewsComplete": true,
           "viewsCounted": 4,
           "viewsListed": 4,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 4 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 4 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 4 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 4 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 4,
           "links": [
             {
               "handle": "questfordebagle",
               "url": "https://www.instagram.com/questfordebagle/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035801560435816840": {
+              "views": 1557,
+              "likes": 14,
+              "comments": 5
+            },
+            "4025993582864757497": {
+              "views": 235,
+              "likes": 3,
+              "comments": 1
+            },
+            "4024901310739767050": {
+              "views": 23,
+              "likes": 5,
+              "comments": 0
+            },
+            "4024310377799361195": {
+              "views": 102,
+              "likes": 5,
+              "comments": 1
+            }
+          }
         }
       }
     },
@@ -389,7 +480,7 @@
         "instagram": {
           "handle": "meetfulquest",
           "url": "https://www.instagram.com/meetfulquest/",
-          "status": "stale",
+          "status": "available",
           "views": 0,
           "likes": 0,
           "comments": 0,
@@ -403,10 +494,10 @@
           "recentComments": null,
           "recentNote": "Instagram engagement covers the 0 posts in the public profile preview.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 0,
           "links": [
             {
@@ -427,7 +518,7 @@
         "instagram": {
           "handle": "coherencequests",
           "url": "https://www.instagram.com/coherencequests/",
-          "status": "stale",
+          "status": "available",
           "views": 83,
           "likes": 3,
           "comments": 0,
@@ -435,23 +526,30 @@
           "viewsComplete": true,
           "viewsCounted": 1,
           "viewsListed": 1,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 1 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 1 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 1 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 1 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 1,
           "links": [
             {
               "handle": "coherencequests",
               "url": "https://www.instagram.com/coherencequests/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035803740295528517": {
+              "views": 83,
+              "likes": 3,
+              "comments": 0
+            }
+          }
         }
       }
     },
@@ -465,7 +563,7 @@
         "instagram": {
           "handle": "earthsquests",
           "url": "https://www.instagram.com/earthsquests/",
-          "status": "stale",
+          "status": "available",
           "views": 212,
           "likes": 9,
           "comments": 0,
@@ -473,23 +571,40 @@
           "viewsComplete": true,
           "viewsCounted": 3,
           "viewsListed": 3,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 3 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 3 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 3 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 3 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 3,
           "links": [
             {
               "handle": "earthsquests",
               "url": "https://www.instagram.com/earthsquests/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035811697460871347": {
+              "views": 109,
+              "likes": 1,
+              "comments": 0
+            },
+            "4035803740295528517": {
+              "views": 83,
+              "likes": 3,
+              "comments": 0
+            },
+            "4029781930982906943": {
+              "views": 20,
+              "likes": 5,
+              "comments": 0
+            }
+          }
         }
       }
     },
@@ -503,7 +618,7 @@
         "instagram": {
           "handle": "tellscreenquest",
           "url": "https://www.instagram.com/tellscreenquest/",
-          "status": "stale",
+          "status": "available",
           "views": 83,
           "likes": 3,
           "comments": 0,
@@ -511,23 +626,30 @@
           "viewsComplete": true,
           "viewsCounted": 1,
           "viewsListed": 1,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 1 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 1 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 1 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 1 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "links": [
             {
               "handle": "tellscreenquest",
               "url": "https://www.instagram.com/tellscreenquest/"
             }
           ],
-          "posts": 1
+          "posts": 1,
+          "postMetrics": {
+            "4035803740295528517": {
+              "views": 83,
+              "likes": 3,
+              "comments": 0
+            }
+          }
         }
       }
     },
@@ -541,7 +663,7 @@
         "instagram": {
           "handle": "cocreatorquest",
           "url": "https://www.instagram.com/cocreatorquest/",
-          "status": "stale",
+          "status": "available",
           "views": 83,
           "likes": 3,
           "comments": 0,
@@ -549,23 +671,30 @@
           "viewsComplete": true,
           "viewsCounted": 1,
           "viewsListed": 1,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 1 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 1 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 1 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 1 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 1,
           "links": [
             {
               "handle": "cocreatorquest",
               "url": "https://www.instagram.com/cocreatorquest/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035803740295528517": {
+              "views": 83,
+              "likes": 3,
+              "comments": 0
+            }
+          }
         }
       }
     },
@@ -579,7 +708,7 @@
         "instagram": {
           "handle": "placeboquest",
           "url": "https://www.instagram.com/placeboquest/",
-          "status": "stale",
+          "status": "available",
           "views": 494,
           "likes": 24,
           "comments": 3,
@@ -587,23 +716,50 @@
           "viewsComplete": true,
           "viewsCounted": 5,
           "viewsListed": 5,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 5 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 5 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 5 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 5 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 5,
           "links": [
             {
               "handle": "placeboquest",
               "url": "https://www.instagram.com/placeboquest/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035803740295528517": {
+              "views": 83,
+              "likes": 3,
+              "comments": 0
+            },
+            "4032849559327554908": {
+              "views": 87,
+              "likes": 2,
+              "comments": 2
+            },
+            "4031354673896573053": {
+              "views": 104,
+              "likes": 6,
+              "comments": 0
+            },
+            "4029783880223235562": {
+              "views": 109,
+              "likes": 5,
+              "comments": 0
+            },
+            "4029135757377530809": {
+              "views": 111,
+              "likes": 8,
+              "comments": 1
+            }
+          }
         }
       }
     },
@@ -617,7 +773,7 @@
         "instagram": {
           "handle": "arcadefunquest",
           "url": "https://www.instagram.com/arcadefunquest/",
-          "status": "stale",
+          "status": "available",
           "views": 528,
           "likes": 19,
           "comments": 1,
@@ -625,23 +781,50 @@
           "viewsComplete": true,
           "viewsCounted": 5,
           "viewsListed": 5,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 5 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 5 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 5 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 5 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 5,
           "links": [
             {
               "handle": "arcadefunquest",
               "url": "https://www.instagram.com/arcadefunquest/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035803740295528517": {
+              "views": 83,
+              "likes": 3,
+              "comments": 0
+            },
+            "4033687393191236035": {
+              "views": 69,
+              "likes": 2,
+              "comments": 0
+            },
+            "4032847851429169410": {
+              "views": 181,
+              "likes": 5,
+              "comments": 1
+            },
+            "4029792904760647873": {
+              "views": 52,
+              "likes": 2,
+              "comments": 0
+            },
+            "4029109620905617254": {
+              "views": 143,
+              "likes": 7,
+              "comments": 0
+            }
+          }
         }
       }
     },
@@ -655,7 +838,7 @@
         "instagram": {
           "handle": "arcadefunquests",
           "url": "https://www.instagram.com/arcadefunquests/",
-          "status": "stale",
+          "status": "available",
           "views": 452,
           "likes": 16,
           "comments": 1,
@@ -663,23 +846,50 @@
           "viewsComplete": true,
           "viewsCounted": 5,
           "viewsListed": 5,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 5 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 5 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 5 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 5 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 5,
           "links": [
             {
               "handle": "arcadefunquests",
               "url": "https://www.instagram.com/arcadefunquests/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4033687393191236035": {
+              "views": 69,
+              "likes": 2,
+              "comments": 0
+            },
+            "4032847851429169410": {
+              "views": 181,
+              "likes": 5,
+              "comments": 1
+            },
+            "4031353600590801994": {
+              "views": 7,
+              "likes": 0,
+              "comments": 0
+            },
+            "4029792904760647873": {
+              "views": 52,
+              "likes": 2,
+              "comments": 0
+            },
+            "4029109620905617254": {
+              "views": 143,
+              "likes": 7,
+              "comments": 0
+            }
+          }
         }
       }
     },
@@ -693,7 +903,7 @@
         "instagram": {
           "handle": "uapquest",
           "url": "https://www.instagram.com/uapquest/",
-          "status": "stale",
+          "status": "available",
           "views": 4014,
           "likes": 167,
           "comments": 45,
@@ -701,23 +911,45 @@
           "viewsComplete": true,
           "viewsCounted": 4,
           "viewsListed": 4,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 4 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 4 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 4 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 4 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 4,
           "links": [
             {
               "handle": "uapquest",
               "url": "https://www.instagram.com/uapquest/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4029093847922809659": {
+              "views": 256,
+              "likes": 16,
+              "comments": 5
+            },
+            "4027997553862966567": {
+              "views": 1583,
+              "likes": 77,
+              "comments": 4
+            },
+            "4027248839242525392": {
+              "views": 2040,
+              "likes": 70,
+              "comments": 35
+            },
+            "4027087496381308201": {
+              "views": 135,
+              "likes": 4,
+              "comments": 1
+            }
+          }
         }
       }
     },
@@ -731,7 +963,7 @@
         "instagram": {
           "handle": "buildnewamerica",
           "url": "https://www.instagram.com/buildnewamerica/",
-          "status": "stale",
+          "status": "partial",
           "views": 3775,
           "likes": 264,
           "comments": 30,
@@ -739,23 +971,55 @@
           "viewsComplete": false,
           "viewsCounted": 6,
           "viewsListed": 15,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 6 of 15 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 6 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 15,
           "links": [
             {
               "handle": "buildnewamerica",
               "url": "https://www.instagram.com/buildnewamerica/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035650279747245246": {
+              "views": 311,
+              "likes": 22,
+              "comments": 3
+            },
+            "4034292588961488741": {
+              "views": 1540,
+              "likes": 119,
+              "comments": 14
+            },
+            "4033673048988628210": {
+              "views": 147,
+              "likes": 16,
+              "comments": 4
+            },
+            "4032869591100722360": {
+              "views": 1582,
+              "likes": 88,
+              "comments": 7
+            },
+            "4032041395501631474": {
+              "views": 92,
+              "likes": 8,
+              "comments": 1
+            },
+            "4031351745447297973": {
+              "views": 103,
+              "likes": 11,
+              "comments": 1
+            }
+          }
         }
       }
     },
@@ -769,7 +1033,7 @@
         "instagram": {
           "handle": "americavlogged",
           "url": "https://www.instagram.com/americavlogged/",
-          "status": "stale",
+          "status": "available",
           "views": 267,
           "likes": 2,
           "comments": 0,
@@ -777,23 +1041,40 @@
           "viewsComplete": true,
           "viewsCounted": 3,
           "viewsListed": 3,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 3 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 3 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 3 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 3 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 3,
           "links": [
             {
               "handle": "americavlogged",
               "url": "https://www.instagram.com/americavlogged/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4033439768656866467": {
+              "views": 90,
+              "likes": 0,
+              "comments": 0
+            },
+            "4033439187259286615": {
+              "views": 100,
+              "likes": 2,
+              "comments": 0
+            },
+            "4033438693220606011": {
+              "views": 77,
+              "likes": 0,
+              "comments": 0
+            }
+          }
         }
       }
     },
@@ -807,7 +1088,7 @@
         "instagram": {
           "handle": "americas.love",
           "url": "https://www.instagram.com/americas.love/",
-          "status": "stale",
+          "status": "partial",
           "views": 1505,
           "likes": 35,
           "comments": 2,
@@ -815,23 +1096,55 @@
           "viewsComplete": false,
           "viewsCounted": 6,
           "viewsListed": 10,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 6 of 10 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 6 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "links": [
             {
               "handle": "americas.love",
               "url": "https://www.instagram.com/americas.love/"
             }
           ],
-          "posts": 10
+          "posts": 10,
+          "postMetrics": {
+            "4026977954004647459": {
+              "views": 135,
+              "likes": 2,
+              "comments": 0
+            },
+            "4026972610536677147": {
+              "views": 133,
+              "likes": 2,
+              "comments": 0
+            },
+            "4026971322189237800": {
+              "views": 89,
+              "likes": 8,
+              "comments": 1
+            },
+            "4026290390247465605": {
+              "views": 899,
+              "likes": 12,
+              "comments": 0
+            },
+            "4023337149285143294": {
+              "views": 78,
+              "likes": 5,
+              "comments": 0
+            },
+            "4023336929486774050": {
+              "views": 171,
+              "likes": 6,
+              "comments": 1
+            }
+          }
         }
       }
     },
@@ -845,7 +1158,7 @@
         "instagram": {
           "handle": "america.evolution",
           "url": "https://www.instagram.com/america.evolution/",
-          "status": "stale",
+          "status": "available",
           "views": 407,
           "likes": 42,
           "comments": 9,
@@ -853,23 +1166,35 @@
           "viewsComplete": true,
           "viewsCounted": 2,
           "viewsListed": 2,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 2 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 2 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 2 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 2 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "links": [
             {
               "handle": "america.evolution",
               "url": "https://www.instagram.com/america.evolution/"
             }
           ],
-          "posts": 2
+          "posts": 2,
+          "postMetrics": {
+            "4008348590851638176": {
+              "views": 248,
+              "likes": 19,
+              "comments": 2
+            },
+            "4001025261729835829": {
+              "views": 159,
+              "likes": 23,
+              "comments": 7
+            }
+          }
         }
       }
     },
@@ -911,7 +1236,7 @@
         "instagram": {
           "handle": "brandonconceicaopodcast",
           "url": "https://www.instagram.com/brandonconceicaopodcast/",
-          "status": "stale",
+          "status": "partial",
           "views": 3994,
           "likes": 63,
           "comments": 21,
@@ -919,23 +1244,55 @@
           "viewsComplete": false,
           "viewsCounted": 6,
           "viewsListed": 39,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 6 of 39 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 6 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 39,
           "links": [
             {
               "handle": "brandonconceicaopodcast",
               "url": "https://www.instagram.com/brandonconceicaopodcast/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035752924801271987": {
+              "views": 755,
+              "likes": 3,
+              "comments": 1
+            },
+            "4035647706717513734": {
+              "views": 1120,
+              "likes": 7,
+              "comments": 4
+            },
+            "4035490972715716056": {
+              "views": 73,
+              "likes": 6,
+              "comments": 1
+            },
+            "4035375389592774517": {
+              "views": 1617,
+              "likes": 37,
+              "comments": 10
+            },
+            "4035279953791898266": {
+              "views": 196,
+              "likes": 3,
+              "comments": 4
+            },
+            "4035028373935132870": {
+              "views": 233,
+              "likes": 7,
+              "comments": 1
+            }
+          }
         }
       }
     },
@@ -949,7 +1306,7 @@
         "instagram": {
           "handle": "debagle.app",
           "url": "https://www.instagram.com/debagle.app/",
-          "status": "stale",
+          "status": "available",
           "views": 45,
           "likes": 2,
           "comments": 0,
@@ -957,23 +1314,30 @@
           "viewsComplete": true,
           "viewsCounted": 1,
           "viewsListed": 1,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 1 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 1 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 1 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 1 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "links": [
             {
               "handle": "debagle.app",
               "url": "https://www.instagram.com/debagle.app/"
             }
           ],
-          "posts": 1
+          "posts": 1,
+          "postMetrics": {
+            "4036284499383408989": {
+              "views": 45,
+              "likes": 2,
+              "comments": 0
+            }
+          }
         }
       }
     },
@@ -987,7 +1351,7 @@
         "instagram": {
           "handle": "extraordinaryroad",
           "url": "https://www.instagram.com/extraordinaryroad/",
-          "status": "stale",
+          "status": "available",
           "views": 0,
           "likes": 0,
           "comments": 0,
@@ -1001,10 +1365,10 @@
           "recentComments": null,
           "recentNote": "Instagram engagement covers the 0 posts in the public profile preview.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "links": [
             {
               "handle": "extraordinaryroad",
@@ -1025,7 +1389,7 @@
         "instagram": {
           "handle": "thesimplepart",
           "url": "https://www.instagram.com/thesimplepart/",
-          "status": "stale",
+          "status": "available",
           "views": 0,
           "likes": 0,
           "comments": 0,
@@ -1039,10 +1403,10 @@
           "recentComments": null,
           "recentNote": "Instagram engagement covers the 0 posts in the public profile preview.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "links": [
             {
               "handle": "thesimplepart",
@@ -1091,7 +1455,7 @@
         "instagram": {
           "handle": "clayton.financial",
           "url": "https://www.instagram.com/clayton.financial/",
-          "status": "stale",
+          "status": "partial",
           "views": 13834,
           "likes": 2080,
           "comments": 84,
@@ -1099,23 +1463,55 @@
           "viewsComplete": false,
           "viewsCounted": 6,
           "viewsListed": 11,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 6 of 11 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 6 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 11,
           "links": [
             {
               "handle": "clayton.financial",
               "url": "https://www.instagram.com/clayton.financial/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4036238103688858259": {
+              "views": 1004,
+              "likes": 129,
+              "comments": 2
+            },
+            "4035488659334946143": {
+              "views": 2359,
+              "likes": 288,
+              "comments": 8
+            },
+            "4035063882422115571": {
+              "views": 1736,
+              "likes": 270,
+              "comments": 22
+            },
+            "4034264638291421620": {
+              "views": 1686,
+              "likes": 304,
+              "comments": 8
+            },
+            "4033609575579143123": {
+              "views": 2527,
+              "likes": 453,
+              "comments": 37
+            },
+            "4032690479866269548": {
+              "views": 4522,
+              "likes": 636,
+              "comments": 7
+            }
+          }
         }
       }
     },
@@ -1129,7 +1525,7 @@
         "instagram": {
           "handle": "basedlegos",
           "url": "https://www.instagram.com/basedlegos/",
-          "status": "stale",
+          "status": "partial",
           "views": 899,
           "likes": 229,
           "comments": 16,
@@ -1137,23 +1533,53 @@
           "viewsComplete": false,
           "viewsCounted": 4,
           "viewsListed": 84,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 4 of 84 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 4 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "links": [
             {
               "handle": "basedlegos",
               "url": "https://www.instagram.com/basedlegos/"
             }
           ],
-          "posts": 84
+          "posts": 84,
+          "postMetrics": {
+            "4036319024404650738": {
+              "views": 78,
+              "likes": 9,
+              "comments": 3
+            },
+            "4035643280599012783": {
+              "views": 102,
+              "likes": 7,
+              "comments": 2
+            },
+            "4034675015185708846": {
+              "views": 501,
+              "likes": 24,
+              "comments": 7
+            },
+            "4033546750379292379": {
+              "views": 218,
+              "likes": 16,
+              "comments": 2
+            },
+            "3998520175854870970": {
+              "likes": 134,
+              "comments": 2
+            },
+            "3976837643652234846": {
+              "likes": 39,
+              "comments": 0
+            }
+          }
         }
       }
     },
@@ -1167,7 +1593,7 @@
         "instagram": {
           "handle": "americahousenews",
           "url": "https://www.instagram.com/americahousenews/",
-          "status": "stale",
+          "status": "available",
           "views": null,
           "likes": 8,
           "comments": 0,
@@ -1179,19 +1605,45 @@
           "viewsNote": null,
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 7,
           "links": [
             {
               "handle": "americahousenews",
               "url": "https://www.instagram.com/americahousenews/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035666692881353857": {
+              "likes": 1,
+              "comments": 0
+            },
+            "4034808218711144854": {
+              "likes": 2,
+              "comments": 0
+            },
+            "4034231220624348940": {
+              "likes": 2,
+              "comments": 0
+            },
+            "4033301834681182552": {
+              "likes": 1,
+              "comments": 0
+            },
+            "4033299158497156006": {
+              "likes": 1,
+              "comments": 0
+            },
+            "4032835194772442047": {
+              "likes": 1,
+              "comments": 0
+            }
+          }
         }
       }
     },
@@ -1205,7 +1657,7 @@
         "instagram": {
           "handle": "lightmirrornews",
           "url": "https://www.instagram.com/lightmirrornews/",
-          "status": "stale",
+          "status": "available",
           "views": 1901,
           "likes": 58,
           "comments": 5,
@@ -1213,23 +1665,40 @@
           "viewsComplete": true,
           "viewsCounted": 3,
           "viewsListed": 3,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 3 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 3 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 3 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 3 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 3,
           "links": [
             {
               "handle": "lightmirrornews",
               "url": "https://www.instagram.com/lightmirrornews/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035811697460871347": {
+              "views": 109,
+              "likes": 1,
+              "comments": 0
+            },
+            "4033685213178799855": {
+              "views": 815,
+              "likes": 16,
+              "comments": 2
+            },
+            "4029118521084618695": {
+              "views": 977,
+              "likes": 41,
+              "comments": 3
+            }
+          }
         }
       }
     },
@@ -1243,7 +1712,7 @@
         "instagram": {
           "handle": "fakefornownews",
           "url": "https://www.instagram.com/fakefornownews/",
-          "status": "stale",
+          "status": "available",
           "views": 2654,
           "likes": 71,
           "comments": 5,
@@ -1251,23 +1720,45 @@
           "viewsComplete": true,
           "viewsCounted": 4,
           "viewsListed": 4,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 4 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 4 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 4 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 4 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 4,
           "links": [
             {
               "handle": "fakefornownews",
               "url": "https://www.instagram.com/fakefornownews/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035811697460871347": {
+              "views": 109,
+              "likes": 1,
+              "comments": 0
+            },
+            "4033685213178799855": {
+              "views": 815,
+              "likes": 16,
+              "comments": 2
+            },
+            "4031298836175746174": {
+              "views": 753,
+              "likes": 13,
+              "comments": 0
+            },
+            "4029118521084618695": {
+              "views": 977,
+              "likes": 41,
+              "comments": 3
+            }
+          }
         }
       }
     },
@@ -1309,7 +1800,7 @@
         "instagram": {
           "handle": "americaclipping",
           "url": "https://www.instagram.com/americaclipping/",
-          "status": "stale",
+          "status": "partial",
           "views": 2444,
           "likes": 68,
           "comments": 36,
@@ -1317,23 +1808,55 @@
           "viewsComplete": false,
           "viewsCounted": 6,
           "viewsListed": 14,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 6 of 14 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 6 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 14,
           "links": [
             {
               "handle": "americaclipping",
               "url": "https://www.instagram.com/americaclipping/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4032437779496699561": {
+              "views": 18,
+              "likes": 2,
+              "comments": 0
+            },
+            "4032434645714138313": {
+              "views": 145,
+              "likes": 2,
+              "comments": 0
+            },
+            "4032432476747464516": {
+              "views": 118,
+              "likes": 2,
+              "comments": 0
+            },
+            "4028514477078266741": {
+              "views": 838,
+              "likes": 29,
+              "comments": 23
+            },
+            "4028511542625842145": {
+              "views": 1063,
+              "likes": 26,
+              "comments": 13
+            },
+            "4028509781043227559": {
+              "views": 262,
+              "likes": 7,
+              "comments": 0
+            }
+          }
         },
         "youtube": {
           "handle": "americaclipping",
@@ -1431,7 +1954,7 @@
         "instagram": {
           "handle": "americahousedc",
           "url": "https://www.instagram.com/americahousedc/",
-          "status": "stale",
+          "status": "partial",
           "views": 23281,
           "likes": 1703,
           "comments": 439,
@@ -1439,23 +1962,55 @@
           "viewsComplete": false,
           "viewsCounted": 6,
           "viewsListed": 44,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 6 of 44 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 6 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 44,
           "links": [
             {
               "handle": "americahousedc",
               "url": "https://www.instagram.com/americahousedc/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035756811448897532": {
+              "views": 16804,
+              "likes": 1024,
+              "comments": 370
+            },
+            "4033896036673381133": {
+              "views": 985,
+              "likes": 46,
+              "comments": 3
+            },
+            "4030509209061311655": {
+              "views": 2713,
+              "likes": 496,
+              "comments": 23
+            },
+            "4029126879919603242": {
+              "views": 831,
+              "likes": 58,
+              "comments": 3
+            },
+            "4028514477078266741": {
+              "views": 838,
+              "likes": 29,
+              "comments": 23
+            },
+            "4028197485641271214": {
+              "views": 1110,
+              "likes": 50,
+              "comments": 17
+            }
+          }
         },
         "youtube": {
           "handle": "americahousedc",
@@ -1553,7 +2108,7 @@
         "instagram": {
           "handle": "brandondebates",
           "url": "https://www.instagram.com/brandondebates/",
-          "status": "stale",
+          "status": "partial",
           "views": 1057,
           "likes": 35,
           "comments": 8,
@@ -1561,23 +2116,55 @@
           "viewsComplete": false,
           "viewsCounted": 6,
           "viewsListed": 12,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 6 of 12 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 6 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 12,
           "links": [
             {
               "handle": "brandondebates",
               "url": "https://www.instagram.com/brandondebates/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4034140903676551215": {
+              "views": 844,
+              "likes": 11,
+              "comments": 7
+            },
+            "4033248589642918237": {
+              "views": 23,
+              "likes": 3,
+              "comments": 0
+            },
+            "4031498199003388190": {
+              "views": 28,
+              "likes": 7,
+              "comments": 1
+            },
+            "4030781932387239764": {
+              "views": 27,
+              "likes": 4,
+              "comments": 0
+            },
+            "4030777670940873391": {
+              "views": 19,
+              "likes": 3,
+              "comments": 0
+            },
+            "4029127959951671948": {
+              "views": 116,
+              "likes": 7,
+              "comments": 0
+            }
+          }
         }
       }
     },
@@ -1591,7 +2178,7 @@
         "instagram": {
           "handle": "americanhistoryfacts",
           "url": "https://www.instagram.com/americanhistoryfacts/",
-          "status": "stale",
+          "status": "available",
           "views": 1632,
           "likes": 33,
           "comments": 0,
@@ -1599,23 +2186,45 @@
           "viewsComplete": true,
           "viewsCounted": 4,
           "viewsListed": 4,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 4 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 4 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 4 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 4 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "links": [
             {
               "handle": "americanhistoryfacts",
               "url": "https://www.instagram.com/americanhistoryfacts/"
             }
           ],
-          "posts": 4
+          "posts": 4,
+          "postMetrics": {
+            "4020485427649930192": {
+              "views": 790,
+              "likes": 9,
+              "comments": 0
+            },
+            "4019706906140933913": {
+              "views": 668,
+              "likes": 20,
+              "comments": 0
+            },
+            "4018986477965035366": {
+              "views": 52,
+              "likes": 2,
+              "comments": 0
+            },
+            "4018926866452060944": {
+              "views": 122,
+              "likes": 2,
+              "comments": 0
+            }
+          }
         }
       }
     },
@@ -1629,7 +2238,7 @@
         "instagram": {
           "handle": "govtechvision",
           "url": "https://www.instagram.com/govtechvision/",
-          "status": "stale",
+          "status": "partial",
           "views": 6227,
           "likes": 140,
           "comments": 6,
@@ -1637,23 +2246,55 @@
           "viewsComplete": false,
           "viewsCounted": 6,
           "viewsListed": 13,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 6 of 13 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 6 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "links": [
             {
               "handle": "govtechvision",
               "url": "https://www.instagram.com/govtechvision/"
             }
           ],
-          "posts": 13
+          "posts": 13,
+          "postMetrics": {
+            "4031866798285917970": {
+              "views": 561,
+              "likes": 11,
+              "comments": 1
+            },
+            "4030387695027391665": {
+              "views": 811,
+              "likes": 21,
+              "comments": 1
+            },
+            "4029021454325849044": {
+              "views": 1231,
+              "likes": 22,
+              "comments": 1
+            },
+            "4026587276808297509": {
+              "views": 1812,
+              "likes": 30,
+              "comments": 2
+            },
+            "4025888665774842456": {
+              "views": 1744,
+              "likes": 55,
+              "comments": 0
+            },
+            "4024704642846428906": {
+              "views": 68,
+              "likes": 1,
+              "comments": 1
+            }
+          }
         }
       }
     },
@@ -1667,7 +2308,7 @@
         "instagram": {
           "handle": "crazyusafacts",
           "url": "https://www.instagram.com/crazyusafacts/",
-          "status": "stale",
+          "status": "partial",
           "views": 641,
           "likes": 12,
           "comments": 6,
@@ -1675,23 +2316,55 @@
           "viewsComplete": false,
           "viewsCounted": 6,
           "viewsListed": 11,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 6 of 11 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 6 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "links": [
             {
               "handle": "crazyusafacts",
               "url": "https://www.instagram.com/crazyusafacts/"
             }
           ],
-          "posts": 11
+          "posts": 11,
+          "postMetrics": {
+            "4031855790135547630": {
+              "views": 121,
+              "likes": 3,
+              "comments": 1
+            },
+            "4030308052281505142": {
+              "views": 134,
+              "likes": 2,
+              "comments": 1
+            },
+            "4029795491698097421": {
+              "views": 83,
+              "likes": 1,
+              "comments": 1
+            },
+            "4028975845642222733": {
+              "views": 186,
+              "likes": 6,
+              "comments": 1
+            },
+            "4024618635168419338": {
+              "views": 57,
+              "likes": 0,
+              "comments": 1
+            },
+            "4024565370619713277": {
+              "views": 60,
+              "likes": 0,
+              "comments": 1
+            }
+          }
         }
       }
     },
@@ -1705,7 +2378,7 @@
         "instagram": {
           "handle": "politicsnthecity",
           "url": "https://www.instagram.com/politicsnthecity/",
-          "status": "stale",
+          "status": "available",
           "views": 326,
           "likes": 14,
           "comments": 4,
@@ -1713,23 +2386,55 @@
           "viewsComplete": true,
           "viewsCounted": 6,
           "viewsListed": 6,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 6 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 6 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "links": [
             {
               "handle": "politicsnthecity",
               "url": "https://www.instagram.com/politicsnthecity/"
             }
           ],
-          "posts": 6
+          "posts": 6,
+          "postMetrics": {
+            "4024696031486741652": {
+              "views": 16,
+              "likes": 1,
+              "comments": 1
+            },
+            "4021872495014933652": {
+              "views": 31,
+              "likes": 3,
+              "comments": 1
+            },
+            "4021228312658875445": {
+              "views": 48,
+              "likes": 0,
+              "comments": 0
+            },
+            "4020635073748898228": {
+              "views": 92,
+              "likes": 2,
+              "comments": 0
+            },
+            "4019460627692268104": {
+              "views": 49,
+              "likes": 3,
+              "comments": 1
+            },
+            "4018495272361500688": {
+              "views": 90,
+              "likes": 5,
+              "comments": 1
+            }
+          }
         }
       }
     },
@@ -1743,7 +2448,7 @@
         "instagram": {
           "handle": "civicaction101",
           "url": "https://www.instagram.com/civicaction101/",
-          "status": "stale",
+          "status": "available",
           "views": 1915,
           "likes": 29,
           "comments": 3,
@@ -1751,23 +2456,40 @@
           "viewsComplete": true,
           "viewsCounted": 3,
           "viewsListed": 3,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 3 posts.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 3 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 3 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 3 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "links": [
             {
               "handle": "civicaction101",
               "url": "https://www.instagram.com/civicaction101/"
             }
           ],
-          "posts": 3
+          "posts": 3,
+          "postMetrics": {
+            "4031869156032854247": {
+              "views": 118,
+              "likes": 0,
+              "comments": 1
+            },
+            "4030379442524174363": {
+              "views": 266,
+              "likes": 6,
+              "comments": 1
+            },
+            "4029790107756314476": {
+              "views": 1531,
+              "likes": 23,
+              "comments": 1
+            }
+          }
         }
       }
     },
@@ -1781,7 +2503,7 @@
         "instagram": {
           "handle": "constitutionexplained",
           "url": "https://www.instagram.com/constitutionexplained/",
-          "status": "stale",
+          "status": "partial",
           "views": 373,
           "likes": 3,
           "comments": 5,
@@ -1789,23 +2511,55 @@
           "viewsComplete": false,
           "viewsCounted": 6,
           "viewsListed": 9,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 6 of 9 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 6 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "links": [
             {
               "handle": "constitutionexplained",
               "url": "https://www.instagram.com/constitutionexplained/"
             }
           ],
-          "posts": 9
+          "posts": 9,
+          "postMetrics": {
+            "4031873978746081311": {
+              "views": 67,
+              "likes": 0,
+              "comments": 1
+            },
+            "4030288108561120844": {
+              "views": 55,
+              "likes": 0,
+              "comments": 1
+            },
+            "4029792244806394712": {
+              "views": 42,
+              "likes": 0,
+              "comments": 1
+            },
+            "4024702925648819312": {
+              "views": 74,
+              "likes": 2,
+              "comments": 1
+            },
+            "4022362715619473600": {
+              "views": 35,
+              "likes": 1,
+              "comments": 1
+            },
+            "4021875795722278540": {
+              "views": 100,
+              "likes": 0,
+              "comments": 0
+            }
+          }
         }
       }
     },
@@ -1884,7 +2638,7 @@
         "instagram": {
           "handle": "sydney.thackray",
           "url": "https://www.instagram.com/sydney.thackray/",
-          "status": "stale",
+          "status": "available",
           "views": null,
           "likes": 1298,
           "comments": 135,
@@ -1896,19 +2650,45 @@
           "viewsNote": null,
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 34,
           "links": [
             {
               "handle": "sydney.thackray",
               "url": "https://www.instagram.com/sydney.thackray/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "3803667504485784097": {
+              "likes": 1298,
+              "comments": 25
+            },
+            "3746203551173490696": {
+              "likes": 0,
+              "comments": 18
+            },
+            "3719682240797227580": {
+              "likes": 0,
+              "comments": 9
+            },
+            "3647713655548190510": {
+              "likes": 0,
+              "comments": 24
+            },
+            "3630373768407270742": {
+              "likes": 0,
+              "comments": 29
+            },
+            "3610881188375958893": {
+              "likes": 0,
+              "comments": 30
+            }
+          }
         },
         "facebook": {
           "handle": "sydney.thackray",
@@ -1978,31 +2758,68 @@
         "instagram": {
           "handle": "brandon_conceicao",
           "url": "https://www.instagram.com/brandon_conceicao/",
-          "status": "stale",
-          "views": 273866,
-          "likes": 38720,
-          "comments": 2090,
-          "followers": 299705,
+          "status": "partial",
+          "views": 290391,
+          "likes": 44707,
+          "comments": 2445,
+          "followers": 301426,
           "viewsComplete": false,
-          "viewsCounted": 6,
-          "viewsListed": 371,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 6 of 371 posts. The unread posts are not estimated.",
+          "viewsCounted": 7,
+          "viewsListed": 372,
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 7 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 7 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
-          "posts": 371,
+          "error": null,
+          "posts": 372,
           "links": [
             {
               "handle": "brandon_conceicao",
               "url": "https://www.instagram.com/brandon_conceicao/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4034236080609077740": {
+              "views": 7883,
+              "likes": 1980,
+              "comments": 346
+            },
+            "4034960703558629688": {
+              "views": 150611,
+              "likes": 25545,
+              "comments": 1284
+            },
+            "4035437490612947208": {
+              "views": 19699,
+              "likes": 1726,
+              "comments": 92
+            },
+            "4034802873298934919": {
+              "views": 14687,
+              "likes": 2380,
+              "comments": 155
+            },
+            "4034712643997931636": {
+              "views": 16585,
+              "likes": 1942,
+              "comments": 356
+            },
+            "4032725872076728726": {
+              "views": 64401,
+              "likes": 9240,
+              "comments": 161
+            },
+            "4032484868863976596": {
+              "views": 16525,
+              "likes": 1894,
+              "comments": 51
+            }
+          }
         },
         "youtube": {
           "handle": "BrandonLConceicao",
@@ -3411,7 +4228,7 @@
         "instagram": {
           "handle": "drserbyn",
           "url": "https://www.instagram.com/drserbyn/",
-          "status": "stale",
+          "status": "partial",
           "views": 25718,
           "likes": 1596,
           "comments": 435,
@@ -3419,23 +4236,55 @@
           "viewsComplete": false,
           "viewsCounted": 6,
           "viewsListed": 309,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 6 of 309 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 6 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 309,
           "links": [
             {
               "handle": "drserbyn",
               "url": "https://www.instagram.com/drserbyn/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035756811448897532": {
+              "views": 16804,
+              "likes": 1024,
+              "comments": 370
+            },
+            "4034292588961488741": {
+              "views": 1540,
+              "likes": 119,
+              "comments": 14
+            },
+            "4032869591100722360": {
+              "views": 1582,
+              "likes": 88,
+              "comments": 7
+            },
+            "4028638933893773179": {
+              "views": 3230,
+              "likes": 158,
+              "comments": 21
+            },
+            "4027877547777245718": {
+              "views": 1837,
+              "likes": 174,
+              "comments": 16
+            },
+            "4027860746276314636": {
+              "views": 725,
+              "likes": 33,
+              "comments": 7
+            }
+          }
         },
         "facebook": {
           "handle": "serbyn03",
@@ -3505,31 +4354,67 @@
         "instagram": {
           "handle": "claytoncuteri",
           "url": "https://www.instagram.com/claytoncuteri/",
-          "status": "stale",
-          "views": 251522,
-          "likes": 32081,
-          "comments": 1383,
-          "followers": 642689,
+          "status": "partial",
+          "views": 280084,
+          "likes": 39203,
+          "comments": 1611,
+          "followers": 643273,
           "viewsComplete": false,
-          "viewsCounted": 5,
-          "viewsListed": 1064,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 5 of 1064 posts. The unread posts are not estimated.",
+          "viewsCounted": 6,
+          "viewsListed": 1065,
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 6 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 7 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
-          "posts": 1064,
+          "error": null,
+          "posts": 1065,
           "links": [
             {
               "handle": "claytoncuteri",
               "url": "https://www.instagram.com/claytoncuteri/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035756811448897532": {
+              "views": 16804,
+              "likes": 1112,
+              "comments": 390
+            },
+            "4034832097264770545": {
+              "views": 5637,
+              "likes": 756,
+              "comments": 44
+            },
+            "4034741312875226890": {
+              "views": 116141,
+              "likes": 19670,
+              "comments": 741
+            },
+            "4034107655357184134": {
+              "views": 96091,
+              "likes": 13221,
+              "comments": 243
+            },
+            "4033563583610090770": {
+              "likes": 149,
+              "comments": 46
+            },
+            "4033382788324209756": {
+              "views": 16849,
+              "likes": 1963,
+              "comments": 70
+            },
+            "4036915825373282686": {
+              "views": 28562,
+              "likes": 2332,
+              "comments": 77
+            }
+          }
         },
         "youtube": {
           "handle": "ClaytonCuteriACP+travelingtooconsciousness",
@@ -3635,7 +4520,7 @@
         "instagram": {
           "handle": "prophetmode",
           "url": "https://www.instagram.com/prophetmode/",
-          "status": "stale",
+          "status": "available",
           "views": 0,
           "likes": 0,
           "comments": 0,
@@ -3649,10 +4534,10 @@
           "recentComments": null,
           "recentNote": "Instagram engagement covers the 0 posts in the public profile preview.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 0,
           "links": [
             {
@@ -3757,7 +4642,7 @@
         "instagram": {
           "handle": "talktometaylor",
           "url": "https://www.instagram.com/talktometaylor/",
-          "status": "stale",
+          "status": "partial",
           "views": 5743,
           "likes": 152,
           "comments": 38,
@@ -3765,23 +4650,54 @@
           "viewsComplete": false,
           "viewsCounted": 5,
           "viewsListed": 889,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 5 of 889 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 5 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 889,
           "links": [
             {
               "handle": "talktometaylor",
               "url": "https://www.instagram.com/talktometaylor/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4035427298778243316": {
+              "likes": 0,
+              "comments": 18
+            },
+            "4034658601569555032": {
+              "views": 1050,
+              "likes": 20,
+              "comments": 5
+            },
+            "4034165744043180638": {
+              "views": 796,
+              "likes": 24,
+              "comments": 5
+            },
+            "4034050732482440191": {
+              "views": 825,
+              "likes": 29,
+              "comments": 4
+            },
+            "4032702187822948259": {
+              "views": 1231,
+              "likes": 36,
+              "comments": 3
+            },
+            "4032109050507455258": {
+              "views": 1841,
+              "likes": 43,
+              "comments": 3
+            }
+          }
         },
         "youtube": {
           "handle": "talktometaylor",
@@ -3851,7 +4767,7 @@
         "instagram": {
           "handle": "robnelsonlive",
           "url": "https://www.instagram.com/robnelsonlive/",
-          "status": "stale",
+          "status": "partial",
           "views": 498,
           "likes": 16,
           "comments": 2,
@@ -3859,23 +4775,54 @@
           "viewsComplete": false,
           "viewsCounted": 5,
           "viewsListed": 119,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 5 of 119 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 5 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 119,
           "links": [
             {
               "handle": "robnelsonlive",
               "url": "https://www.instagram.com/robnelsonlive/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "3806324214337631629": {
+              "views": 58,
+              "likes": 4,
+              "comments": 1
+            },
+            "3758485654083802544": {
+              "likes": 2,
+              "comments": 0
+            },
+            "3758420804774302920": {
+              "views": 91,
+              "likes": 1,
+              "comments": 0
+            },
+            "3758129775644101111": {
+              "views": 116,
+              "likes": 1,
+              "comments": 0
+            },
+            "3757921267697707821": {
+              "views": 166,
+              "likes": 5,
+              "comments": 1
+            },
+            "3757862684848373745": {
+              "views": 67,
+              "likes": 3,
+              "comments": 0
+            }
+          }
         },
         "youtube": {
           "handle": "robnelsonlive",
@@ -3973,7 +4920,7 @@
         "instagram": {
           "handle": "ganamuk",
           "url": "https://www.instagram.com/ganamuk/",
-          "status": "stale",
+          "status": "available",
           "views": null,
           "likes": 216,
           "comments": 7,
@@ -3985,19 +4932,25 @@
           "viewsNote": null,
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 1 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 1 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 1,
           "links": [
             {
               "handle": "ganamuk",
               "url": "https://www.instagram.com/ganamuk/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "1165590043014020090": {
+              "likes": 216,
+              "comments": 7
+            }
+          }
         }
       }
     },
@@ -4076,7 +5029,7 @@
         "instagram": {
           "handle": "evolutionarybrandon",
           "url": "https://www.instagram.com/evolutionarybrandon/",
-          "status": "stale",
+          "status": "partial",
           "views": 1417,
           "likes": 83,
           "comments": 15,
@@ -4084,23 +5037,54 @@
           "viewsComplete": false,
           "viewsCounted": 5,
           "viewsListed": 28,
-          "viewsMethod": "sum_of_public_posts",
-          "viewsNote": "Sum of public play counts on 5 of 28 posts. The unread posts are not estimated.",
+          "viewsMethod": "sum_of_observed_posts",
+          "viewsNote": "Recorded views across 5 distinct Instagram posts.",
           "recentLikes": null,
           "recentComments": null,
-          "recentNote": "Instagram engagement covers the 6 posts in the public profile preview.",
+          "recentNote": "Engagement summed across 6 observed posts where counts are available.",
           "viewsPerSecond": null,
-          "observedAt": "2026-11-23T03:39:14.402Z",
-          "checkedAt": "2026-11-23T20:10:56.122Z",
+          "observedAt": "2026-11-23T20:54:31.673Z",
+          "checkedAt": "2026-11-23T20:54:31.673Z",
           "source": "instagram-profile-embed",
-          "error": "Instagram HTTP 429",
+          "error": null,
           "posts": 28,
           "links": [
             {
               "handle": "evolutionarybrandon",
               "url": "https://www.instagram.com/evolutionarybrandon/"
             }
-          ]
+          ],
+          "postMetrics": {
+            "4034769046578348340": {
+              "views": 62,
+              "likes": 12,
+              "comments": 1
+            },
+            "4034656515675364092": {
+              "likes": 11,
+              "comments": 2
+            },
+            "4033907685384073636": {
+              "views": 110,
+              "likes": 9,
+              "comments": 1
+            },
+            "4033562194515574457": {
+              "views": 199,
+              "likes": 12,
+              "comments": 3
+            },
+            "4032613741509488555": {
+              "views": 88,
+              "likes": 11,
+              "comments": 6
+            },
+            "4031262185187162256": {
+              "views": 958,
+              "likes": 28,
+              "comments": 2
+            }
+          }
         },
         "youtube": {
           "handle": "evolutionarybrandon",
@@ -20359,6 +21343,523 @@
             "likes": 32081,
             "comments": 1383,
             "followers": 642689
+          },
+          "youtube": {
+            "views": 18287348,
+            "followers": 69800
+          },
+          "x": {
+            "followers": 874
+          },
+          "facebook": {
+            "followers": 831369
+          }
+        },
+        "prophetnode": {
+          "instagram": {
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "followers": 1110238
+          },
+          "youtube": {
+            "views": 503901,
+            "followers": 893
+          },
+          "x": {
+            "followers": 8
+          }
+        },
+        "talktometaylor": {
+          "tiktok": {
+            "views": 931446,
+            "likes": 58000,
+            "comments": 2164,
+            "followers": 1888
+          },
+          "instagram": {
+            "views": 5743,
+            "likes": 152,
+            "comments": 38,
+            "followers": 14937
+          },
+          "youtube": {
+            "views": 1181447,
+            "followers": 3590
+          }
+        },
+        "robnelsonlive": {
+          "tiktok": {
+            "views": 1873008,
+            "likes": 180100,
+            "comments": 496,
+            "followers": 9499
+          },
+          "instagram": {
+            "views": 498,
+            "likes": 16,
+            "comments": 2,
+            "followers": 3596
+          },
+          "youtube": {
+            "views": 28388,
+            "followers": 1450
+          },
+          "x": {
+            "followers": 3180
+          }
+        },
+        "ganadelrey": {
+          "tiktok": {
+            "views": 40718205,
+            "likes": 3000000,
+            "comments": 35665,
+            "followers": 13400
+          },
+          "instagram": {
+            "likes": 216,
+            "comments": 7,
+            "followers": 1437
+          }
+        },
+        "evolutionarybrandon": {
+          "tiktok": {
+            "views": 20311,
+            "likes": 1222,
+            "comments": 157,
+            "followers": 176
+          },
+          "instagram": {
+            "views": 1417,
+            "likes": 83,
+            "comments": 15,
+            "followers": 178
+          },
+          "youtube": {
+            "views": 119,
+            "followers": 3
+          }
+        }
+      }
+    },
+    {
+      "checkedAt": "2026-11-23T20:54:31.673Z",
+      "accounts": {
+        "questforworldpeace": {
+          "tiktok": {
+            "views": 7127,
+            "likes": 532,
+            "comments": 39,
+            "followers": 97
+          },
+          "instagram": {
+            "views": 5617,
+            "likes": 597,
+            "comments": 87,
+            "followers": 186
+          },
+          "youtube": {
+            "views": 27
+          }
+        },
+        "questforthepeople": {
+          "instagram": {
+            "views": 1557,
+            "likes": 14,
+            "comments": 5,
+            "followers": 31
+          }
+        },
+        "questforpresident": {
+          "instagram": {
+            "views": 6042,
+            "likes": 82,
+            "comments": 13,
+            "followers": 702
+          }
+        },
+        "questforwhitehouse": {
+          "instagram": {
+            "views": 39434,
+            "likes": 141,
+            "comments": 63,
+            "followers": 75
+          }
+        },
+        "questforquest": {
+          "instagram": {
+            "views": 1714,
+            "likes": 20,
+            "comments": 5,
+            "followers": 32
+          }
+        },
+        "questfordebagle": {
+          "instagram": {
+            "views": 1917,
+            "likes": 27,
+            "comments": 7,
+            "followers": 31
+          }
+        },
+        "meetfulquest": {
+          "instagram": {
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "followers": 7
+          }
+        },
+        "coherencequests": {
+          "instagram": {
+            "views": 83,
+            "likes": 3,
+            "comments": 0,
+            "followers": 9
+          }
+        },
+        "earthsquests": {
+          "instagram": {
+            "views": 212,
+            "likes": 9,
+            "comments": 0,
+            "followers": 17
+          }
+        },
+        "tellscreenquest": {
+          "instagram": {
+            "views": 83,
+            "likes": 3,
+            "comments": 0,
+            "followers": 6
+          }
+        },
+        "cocreatorquest": {
+          "instagram": {
+            "views": 83,
+            "likes": 3,
+            "comments": 0,
+            "followers": 10
+          }
+        },
+        "placeboquest": {
+          "instagram": {
+            "views": 494,
+            "likes": 24,
+            "comments": 3,
+            "followers": 12
+          }
+        },
+        "arcadefunquest": {
+          "instagram": {
+            "views": 528,
+            "likes": 19,
+            "comments": 1,
+            "followers": 16
+          }
+        },
+        "arcadefunquests": {
+          "instagram": {
+            "views": 452,
+            "likes": 16,
+            "comments": 1,
+            "followers": 8
+          }
+        },
+        "uapquest": {
+          "instagram": {
+            "views": 4014,
+            "likes": 167,
+            "comments": 45,
+            "followers": 22
+          }
+        },
+        "buildnewamerica": {
+          "instagram": {
+            "views": 3775,
+            "likes": 264,
+            "comments": 30,
+            "followers": 150
+          }
+        },
+        "americavlogged": {
+          "instagram": {
+            "views": 267,
+            "likes": 2,
+            "comments": 0,
+            "followers": 2
+          }
+        },
+        "americas.love": {
+          "instagram": {
+            "views": 1505,
+            "likes": 35,
+            "comments": 2,
+            "followers": 906
+          }
+        },
+        "america.evolution": {
+          "instagram": {
+            "views": 407,
+            "likes": 42,
+            "comments": 9,
+            "followers": 101
+          }
+        },
+        "brandonconceicaopodcast": {
+          "tiktok": {
+            "views": 136,
+            "likes": 4,
+            "comments": 0,
+            "followers": 23
+          },
+          "instagram": {
+            "views": 3994,
+            "likes": 63,
+            "comments": 21,
+            "followers": 107
+          }
+        },
+        "debagle.app": {
+          "instagram": {
+            "views": 45,
+            "likes": 2,
+            "comments": 0,
+            "followers": 9
+          }
+        },
+        "extraordinaryroad": {
+          "instagram": {
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "followers": 13
+          }
+        },
+        "thesimplepart": {
+          "instagram": {
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "followers": 15
+          }
+        },
+        "clayton.financial": {
+          "tiktok": {
+            "views": 462,
+            "likes": 47,
+            "comments": 9,
+            "followers": 15
+          },
+          "instagram": {
+            "views": 13834,
+            "likes": 2080,
+            "comments": 84,
+            "followers": 4070
+          }
+        },
+        "basedlegos": {
+          "instagram": {
+            "views": 899,
+            "likes": 229,
+            "comments": 16,
+            "followers": 11116
+          }
+        },
+        "americahousenews": {
+          "instagram": {
+            "likes": 8,
+            "comments": 0,
+            "followers": 8
+          }
+        },
+        "lightmirrornews": {
+          "instagram": {
+            "views": 1901,
+            "likes": 58,
+            "comments": 5,
+            "followers": 11
+          }
+        },
+        "fakefornownews": {
+          "instagram": {
+            "views": 2654,
+            "likes": 71,
+            "comments": 5,
+            "followers": 12
+          }
+        },
+        "americaclipping": {
+          "tiktok": {
+            "views": 127,
+            "likes": 4,
+            "comments": 1,
+            "followers": 2
+          },
+          "instagram": {
+            "views": 2444,
+            "likes": 68,
+            "comments": 36,
+            "followers": 41
+          },
+          "youtube": {
+            "views": 2
+          },
+          "x": {
+            "followers": 2
+          }
+        },
+        "americahousedc": {
+          "tiktok": {
+            "views": 17995,
+            "likes": 973,
+            "comments": 102,
+            "followers": 132
+          },
+          "instagram": {
+            "views": 23281,
+            "likes": 1703,
+            "comments": 439,
+            "followers": 598
+          },
+          "youtube": {
+            "views": 50929,
+            "followers": 44
+          },
+          "x": {
+            "followers": 3
+          }
+        },
+        "brandondebates": {
+          "tiktok": {
+            "views": 0,
+            "likes": 0,
+            "followers": 0
+          },
+          "instagram": {
+            "views": 1057,
+            "likes": 35,
+            "comments": 8,
+            "followers": 53
+          }
+        },
+        "americanhistoryfacts": {
+          "instagram": {
+            "views": 1632,
+            "likes": 33,
+            "comments": 0,
+            "followers": 21
+          }
+        },
+        "govtechvision": {
+          "instagram": {
+            "views": 6227,
+            "likes": 140,
+            "comments": 6,
+            "followers": 40
+          }
+        },
+        "crazyusafacts": {
+          "instagram": {
+            "views": 641,
+            "likes": 12,
+            "comments": 6,
+            "followers": 15
+          }
+        },
+        "politicsnthecity": {
+          "instagram": {
+            "views": 326,
+            "likes": 14,
+            "comments": 4,
+            "followers": 9
+          }
+        },
+        "civicaction101": {
+          "instagram": {
+            "views": 1915,
+            "likes": 29,
+            "comments": 3,
+            "followers": 8
+          }
+        },
+        "constitutionexplained": {
+          "instagram": {
+            "views": 373,
+            "likes": 3,
+            "comments": 5,
+            "followers": 9
+          }
+        },
+        "illuminati": {
+          "tiktok": {
+            "views": 0,
+            "likes": 0,
+            "followers": 1141
+          }
+        },
+        "sydney.thackray": {
+          "tiktok": {
+            "likes": 1700000,
+            "followers": 113400
+          },
+          "instagram": {
+            "likes": 1298,
+            "comments": 135,
+            "followers": 27952
+          },
+          "facebook": {
+            "followers": 1046
+          }
+        },
+        "brandon_conceicao": {
+          "tiktok": {
+            "views": 953146,
+            "likes": 111000,
+            "comments": 4047,
+            "followers": 11300
+          },
+          "instagram": {
+            "views": 290391,
+            "likes": 44707,
+            "comments": 2445,
+            "followers": 301426
+          },
+          "youtube": {
+            "views": 2264534,
+            "likes": 95680,
+            "followers": 17600
+          },
+          "facebook": {
+            "followers": 391600
+          }
+        },
+        "drserbyn": {
+          "tiktok": {
+            "views": 1866869,
+            "likes": 156600,
+            "comments": 14800,
+            "followers": 11800
+          },
+          "instagram": {
+            "views": 25718,
+            "likes": 1596,
+            "comments": 435,
+            "followers": 35671
+          }
+        },
+        "claytoncuteri": {
+          "tiktok": {
+            "views": 8614,
+            "likes": 13600,
+            "comments": 0,
+            "followers": 10600
+          },
+          "instagram": {
+            "views": 280084,
+            "likes": 39203,
+            "comments": 1611,
+            "followers": 643273
           },
           "youtube": {
             "views": 18287348,

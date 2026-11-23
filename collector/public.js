@@ -168,6 +168,11 @@ export function instagramFromProfile(user, edges = user?.edge_owner_to_timeline_
   const result = {
     ok: true,
     source: 'instagram-web-profile',
+    postMetrics: Object.fromEntries(edges.map(edge => edge?.node || edge).filter(post => post?.id).map(post => [post.id, {
+      views: num(post.video_play_count ?? post.video_view_count),
+      likes: num(post.edge_liked_by?.count ?? post.like_count),
+      comments: num(post.edge_media_to_comment?.count ?? post.comment_count),
+    }])),
     followers,
     views: null,
     likes: null,
