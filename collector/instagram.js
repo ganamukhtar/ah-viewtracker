@@ -42,15 +42,20 @@ export async function collectInstagram(account, env) {
   const mediaCount = num(discovery.media_count);
   const media = [];
   let page = discovery.media;
-  let guard = 0;
-  while (page && guard < 6) {
-    if (Array.isArray(page.data)) media.push(...page.data);
+  const visited = new Set();
+  const ids = new Set();
+  while (page) {
+    for (const item of page.data || []) {
+      if (!item.id || ids.has(item.id)) continue;
+      ids.add(item.id);
+      media.push(item);
+    }
     const next = page.paging?.next;
-    if (!next || (mediaCount != null && media.length >= mediaCount)) break;
+    if (!next || visited.has(next) || (mediaCount != null && media.length >= mediaCount)) break;
+    visited.add(next);
     const response = await fetchJson(next);
     if (!response.ok) break;
     page = response.body;
-    guard += 1;
   }
 
   const followers = num(discovery.followers_count);

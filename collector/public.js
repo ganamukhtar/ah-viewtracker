@@ -226,11 +226,6 @@ export async function instagramEmbedCounts(html, handle, readPost = async code =
 
 export async function collectInstagramPublic(handle) {
   const name = String(handle).replace(/^@/, '');
-  try {
-    const embed = await fetchText(`https://www.instagram.com/${encodeURIComponent(name)}/embed/`);
-    const preview = embed.ok && await instagramEmbedCounts(embed.text, name);
-    if (preview && (preview.views != null || preview.likes != null || preview.posts === 0)) return preview;
-  } catch { /* Try the full profile when the embed is unavailable. */ }
   let lastError = 'Instagram profile was not readable';
   for (let attempt = 0; attempt < 2; attempt += 1) {
     if (attempt) await new Promise((resolve) => setTimeout(resolve, 4000 * attempt));
@@ -244,24 +239,32 @@ export async function collectInstagramPublic(handle) {
       timeoutMs: 25000,
     }).catch((error) => ({ ok: false, status: 0, body: { message: error.message } }));
     const user = info.body?.data?.user;
-    if (info.status === 404 || user === null) return { ok: false, error: 'Instagram profile not found' };
+
     if (info.ok && user?.username && String(user.username).toLowerCase() === name.toLowerCase()) {
       let edges = user.edge_owner_to_timeline_media?.edges || [];
       let page = user.edge_owner_to_timeline_media?.page_info;
-      for (let extra = 0; extra < 4 && page?.has_next_page && page.end_cursor && user.id; extra += 1) {
+      const cursors = new Set();
+      while (page?.has_next_page && page.end_cursor && user.id && !cursors.has(page.end_cursor)) {
+        cursors.add(page.end_cursor);
         const more = await fetchInstagramPage(user.id, page.end_cursor);
         if (!more?.edges?.length) break;
         edges = edges.concat(more.edges);
         page = more.page_info;
       }
+      edges = [...new Map(edges.filter(edge => edge.node?.id).map(edge => [edge.node.id, edge])).values()];
       const result = instagramFromProfile(user, edges);
-      if (result.followers == null && result.views == null) {
-        lastError = 'Instagram profile had no public counts';
-        continue;
-      }
-      return result;
+      if (result.likes == null && result.views == null && result.comments == null) {
+        lastError = 'Instagram profile had no post counts';
+      } else return result;
     }
     lastError = info.status === 429 ? 'Instagram HTTP 429' : (info.body?.message || `Instagram HTTP ${info.status || 'error'}`);
+    if (!attempt) {
+  try {
+    const embed = await fetchText(`https://www.instagram.com/${encodeURIComponent(name)}/embed/`);
+    const preview = embed.ok && await instagramEmbedCounts(embed.text, name);
+    if (preview && (preview.views != null || preview.likes != null || preview.posts === 0)) return preview;
+  } catch { /* Try the full profile when the embed is unavailable. */ }
+    }
     let res;
     try { res = await fetchText(`https://www.instagram.com/${encodeURIComponent(name)}/`, { headers: { 'user-agent': 'ah-viewtracker/1.0' } }); }
     catch (error) { lastError = `Instagram request failed (${error.message})`; continue; }
